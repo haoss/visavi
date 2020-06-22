@@ -6,8 +6,9 @@
 // }
 
 $primary-color: black;
+$add-color: #F1E1D5;
 
-$link-color: blue;
+$link-color: black;
 
 $color-white: #ffffff;
 $color-gray: #cccccc;
@@ -16,3 +17,6 @@ $color-red: red;
 $color-pink: pink;
 
 $primary-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+$font-montserrat: 'Montserrat', $primary-font;
+$font-cormorant: 'Cormorant Unicase', $primary-font;
