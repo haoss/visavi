@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
 
-  -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - siteName' //title страницы для генерации верстки
+  -var active = 'Новости и Акции' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Новости и Акции' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
 
   include ./_include/_head
 
@@ -17,22 +17,50 @@ html(lang="ru")
     .content
       .container
 
-        h1 Главная 22
+        nav(aria-label='breadcrumb')
+          ol.breadcrumb
+            li.breadcrumb-item
+              a(href='#!') Главная
+            li.breadcrumb-item
+              a(href='#!') Новости и Акции
+            li.breadcrumb-item.active(aria-current='page')
+              span Новость
 
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
-          .col-md-12 12 collumns
-          .col-md-12 12 collumns
+        .content__document
 
-        .row
-          .col-md-12
+          .content__document-head
+            .content__document-thumb
+              img(src="./tmp/content-thumb-img.png", alt="").img-fluid
+            h1
+              span В объятиях арганы: новая эко-реставрация волос Nashi Argan Filler Therapy
 
-            button.btn.btn-primary(type="button") Button
-            button.btn.btn-danger(type="button") Button
-            button.btn.btn-custom-color(type="button") Button
-            button.btn.btn-custom-color2(type="button") Button
+          p Жаркое время года требует объемного внимания к коже и волосам. Именно потому, в салонах Backstage появилась новая идеальная процедура для волос от легендарного итальянского бренда NASHI ARGAN.
+          p Если вы еще не знакомы с NASHI – это особенный момент. Время знакомиться.
 
+          h2 Уникальность
+          p Линейка NASHI ARGAN – это полноценный эко-friendly уход для волос. В составе каждого флакона – «жидкое золото» или аргановое масло, – очень ценный и редкий компонент. Его можно отыскать только в одном регионе земного шара – в Аргановом биосферном заповеднике.
+
+          h2 Простота
+          p Всего в линии Nashi Argan 5 продуктов, рассчитанных на любой тип волос: шампунь, кондиционер, маска, инстант и масло. Каждый продукт доступен в сети Backstage.
+
+          h2 Экологичность
+          p Упаковка всех продуктов выполнена из 100% перерабатываемых материалов (что подтверждает значок вторичной переработки на каждом продукте марки).
+          p Инновационная программа NASHI FILLER THERAPY – это новинка в косметике NASHI. Процедура для реставрации волос мгновенно и профессионально восстанавливает их.
+          p В салоне Backstage Chernovola процедуру решила протестировать модель с мировым именем Татьяна Богдан. О впечатлениях читайте о процедуре читайте здесь.
+          p Салонный уход NASHI FILLER THERAPY состоит из трех продуктов, которые шаг за шагом стимулируют регенерацию волос и возвращают им ухоженный и здоровый вид.
+
+          h3 STEP I
+          p На волосы наносят дважды очищающий шампунь и прорабатывают массажными движениями кожу головы и остальную длину.
+
+          h3 STEP II
+          p Филлер наносят по всей длине и выдерживают под климазоном 15 минут.
+
+          h3 STEP III
+          p Молочко с лифтинг функцией, которое увлажняет локоны и повышает их эластичность.
+
+          .clear20
+
+          a(href="#!").btn.content__btn Другие новости
 
     include ./_include/_footer
     div(style="height: 1000px; background-color: #000")

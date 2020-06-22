@@ -6,3 +6,21 @@ button {
     outline: none;
   }
 }
+
+.btn {
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: rem(18px);
+  background-color: $add-color;
+  text-align: center;
+  padding: 0 15px;
+  text-decoration: none;
+  box-shadow: 1px 4px 5px rgba($color-black,.1);
+  transition: all 0.35s;
+  &:hover {
+    text-decoration: none;
+    box-shadow: 1px 4px 8px rgba($color-black,.2);
+  }
+}
