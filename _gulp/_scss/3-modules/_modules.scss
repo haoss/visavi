@@ -2,8 +2,8 @@
 .breadcrumb {
   padding: 0;
   background: none;
-  font-size: rem(16px);
-  margin-bottom: 37px;
+  font-size: rem(13px);
+  margin-bottom: 25px;
   font-family: $font-montserrat;
   &-item {
     a, span {
@@ -31,17 +31,24 @@
     }
   }
   @include media-breakpoint-up(md) {
-    font-size: rem(18px);
+    font-size: rem(16px);
     margin-bottom: 34px;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: rem(18px);
   }
   @include media-breakpoint-up(xl) {
     margin-bottom: 25px;
+    margin-top: -15px;
   }
 }
 
 .content {
   padding-top: 37px;
   padding-bottom: 50px;
+  @include media-breakpoint-up(xl) {
+    padding-top: 50px;
+  }
   &__document {
     h2, .h2, h3, .h3 {
       display: inline-block;
@@ -110,23 +117,68 @@
         padding: 0 30px 40px 13px;
         width: 412px;
         flex-shrink: 0;
+        margin-right: 15px;
         &::before {
           top: 12px;
         }
       }
     }
     &-head {
+      .h1, h1 {
+        &::before, &::after {
+          height: 14px;
+          background-color: $add-color;
+          position: absolute;
+          left: 0;
+          top: 12px;
+          content: '';
+          width: 285px;
+          z-index: -1;
+        }
+        &::after {
+          top: auto;
+          bottom: 5px;
+          width: 240px;
+          left: 10px;
+        }
+      }
+      @include media-breakpoint-up(sm) {
+        .h1, h1 {
+          &::after {
+            width: 350px;
+          }
+        }
+      }
       @include media-breakpoint-up(md) {
         display: flex;
+        align-items: flex-start;
         margin-bottom: 33px;
         .h1, h1 {
           font-size: rem(45px);
           margin-bottom: 0;
+          &::before {
+            top: 27px;
+            left: 50px;
+          }
+          &::after {
+            bottom: auto;
+            top: 142px;
+            left: 20px;
+          }
         }
       }
       @include media-breakpoint-up(xl) {
         .h1, h1 {
           font-size: rem(64px);
+          &::before {
+            top: 349px;
+            left: 110px;
+          }
+          &::after {
+            bottom: auto;
+            top: 197px;
+            left: 45px;
+          }
         }
       }
     }
@@ -140,6 +192,145 @@
     }
     @include media-breakpoint-up(xl) {
       max-width: 305px;
+    }
+  }
+}
+
+.content__navigation {
+  text-transform: uppercase;
+  font-size: rem(20px);
+  &>ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      list-style: none;
+      position: relative;
+      background: $add-color;
+      &>a, &>span {
+        text-decoration: none;
+        display: block;
+        line-height: 1.2;
+        color: $color-black;
+        padding: 16px 50px 16px 20px;
+      }
+      [class*="icon-"] {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        right: 0;
+        top: 0;
+        font-size: rem(20px);
+        top: 5px;
+        z-index: 5;
+        cursor: pointer;
+        transform-origin: 50%;
+        transform: rotate(0);
+      }
+      ul {
+        text-transform: none;
+        display: none;
+        background: #F9F2ED;
+        padding: 8px 0;
+        li {
+          background: transparent;
+          &>a, &>span {
+            padding: 8px 50px 8px 34px;
+          }
+          [class*="icon-"] {
+            height: 40px;
+            line-height: 40px;
+            top: 0;
+          }
+        }
+        ul {
+          background: $color-white;
+          li {
+            background: transparent;
+            &>a, &>span {
+              padding: 5px 50px 5px 55px;
+            }
+          }
+        }
+      }
+      &.has-folder.active {
+        &>[class*="icon-"] {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+}
+
+.banner-row {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    background: $add-color;
+  }
+  &__block {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    img {
+      display: block;
+      min-height: 120px;
+      object-fit: cover;
+    }
+    .h1, h1 {
+      position: absolute;
+      white-space: nowrap;
+      line-height: 1;
+      margin: 0;
+      color: $color-white;
+      bottom: 15px;
+      left: 10px;
+      font-size: rem(26px);
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &::before {
+      top: 13px;
+      bottom: 17px;
+    }
+    &__block {
+      img {
+        min-height: 220px;
+      }
+      .h1, h1 {
+        bottom: 25px;
+        left: 30px;
+        font-size: rem(48px);
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &::before {
+      top: 21px;
+      bottom: 26px;
+    }
+    &__block {
+      img {
+        min-height: 346px;
+      }
+      .h1, h1 {
+        font-size: rem(64px);
+        bottom: 32px;
+        left: 45px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &::before {
+      top: 33px;
+      bottom: 34px;
     }
   }
 }
