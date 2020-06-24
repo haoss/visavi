@@ -1,15 +1,28 @@
 // Header
 header.header
   .container
+
+    .header__wrapper
+      .header__social
+        a(href="#!")
+          img(src="./images/icon-social-1.svg", alt="")
+        a(href="#!")
+          img(src="./images/icon-social-2.svg", alt="")
+        a(href="#!")
+          img(src="./images/icon-social-3.svg", alt="")
+        a(href="#!")
+          img(src="./images/icon-social-4.svg", alt="")
+      .header__center
+        .header__logo
+          a(href="#!")
+            img(src="./images/logo.png", alt="")
+        .header__address 
+          p Москва, СВАО, м. Свиблово, Бабушкинская, ул. Кольская, 2/5
+      .header__bottom
+        .header__phones
+          a(href="tel:") +7 499 189-73-88
+          a(href="tel:") +7 499 189-81-22
+        button(type="button").header__btn заказать звонок
+        button(type="button").header__mobile заказать звонок
     
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+  .header__navigation
