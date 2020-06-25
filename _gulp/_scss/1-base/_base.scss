@@ -28,6 +28,9 @@ body {
   @include media-breakpoint-up(md) {
     font-size: rem(20px);
   }
+  &.is-fixed {
+    overflow: hidden;
+  }
 }
 
 //  Typography

@@ -20,9 +20,36 @@ header.header
           p Москва, СВАО, м. Свиблово, Бабушкинская, ул. Кольская, 2/5
       .header__bottom
         .header__phones
-          a(href="tel:") +7 499 189-73-88
-          a(href="tel:") +7 499 189-81-22
-        button(type="button").header__btn заказать звонок
-        button(type="button").header__mobile заказать звонок
+          div
+            a(href="tel:") +7 499 189-73-88
+          div
+            a(href="tel:") +7 499 189-81-22
+        button(type="button").btn.header__btn заказать звонок
+        button(type="button").btn-mobile.j-btn-mobile
+          span
     
-  .header__navigation
+  .navigation
+    button(type="button").navigation__close
+    .navigation__wrapper
+      nav
+        ul
+          li: a(href="#!") list
+          li: a(href="#!") list
+      .navigation__contacts
+        .navigation__social
+          a(href="#!")
+            img(src="./images/icon-social-1.svg", alt="")
+          a(href="#!")
+            img(src="./images/icon-social-2.svg", alt="")
+          a(href="#!")
+            img(src="./images/icon-social-3.svg", alt="")
+          a(href="#!")
+            img(src="./images/icon-social-4.svg", alt="")
+        .navigation__phones
+          div
+            a(href="tel:") +7 499 189-73-88
+          div
+            a(href="tel:") +7 499 189-81-22
+        button(type="button").btn.navigation__btn заказать звонок
+
+.header-holder

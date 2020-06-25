@@ -11,3 +11,54 @@
   }
 }
   
+.navigation {
+  height: 73px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-white;
+  height: 100%;
+  width: 100%;
+  &__close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+  }
+  &__contacts {
+    text-align: center;
+  }
+  &__social {
+    text-align: center;
+    margin-bottom: 11px;
+    font-size: 0;
+    img {
+      width: 44px;
+      height: 44px;
+      display: block;
+    }
+    a {
+      display: inline-block;
+      margin: 0 6px;
+    }
+  }
+  &__phones {
+    margin-bottom: 15px;
+  }
+  &__btn {
+    height: 40px;
+    line-height: 40px;
+  }
+  @include media-breakpoint-up(xl) {
+    display: block;
+    background: rgba(241, 225, 213, 0.42);
+    position: relative;
+  }
+  &.is-active {
+    z-index: 250;
+    display: block;
+  }
+}

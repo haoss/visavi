@@ -55,6 +55,8 @@ $(document).on('ready', function(){
   });
 
   collapseNavigation();
+  headerScroll();
+  mobileNav();
 
   // Chrome Smooth Scroll
   try {
@@ -71,8 +73,22 @@ $(window).on('load', function() {
   $(".loader").delay(400).fadeOut("slow");
 });
 
-$(window).on('scroll', function() { });
-$(window).on('resize', function() { });
+$(window).on('scroll', function() {
+  headerScroll();
+});
+$(window).on('resize', function() {
+  var btn = $('.j-btn-mobile'),
+      navigation = $('.header .navigation'),
+      body = $('body'),
+      width = $(window).width()
+  ;
+
+  if (width >= 1320) {
+    btn.removeClass('is-active');
+    navigation.removeClass('is-active');
+    body.removeClass('is-fixed');
+  }
+});
 
 function collapseNavigation() {
   var li = $('.has-folder'),
@@ -88,4 +104,36 @@ function collapseNavigation() {
       _this.parent(li).toggleClass('active')
     })
   })
+}
+
+function headerScroll() {
+  var header = $('.header');
+  var width = $(window).width();
+
+  if ($(window).scrollTop() > header.height()) {
+    header.addClass('is-scroll');
+  } else {
+    header.removeClass('is-scroll');
+  }
+}
+
+function mobileNav() {
+  var btn = $('.j-btn-mobile'),
+      navigation = $('.header .navigation'),
+      body = $('body')
+  ;
+
+  btn.on('click', function(e){
+    if (btn.hasClass('is-active')) {
+      btn.removeClass('is-active');
+      navigation.removeClass('is-active');
+      body.removeClass('is-fixed');
+    } else {
+      btn.addClass('is-active');
+      navigation.addClass('is-active');
+      body.addClass('is-fixed');
+    }
+    console.log(e);
+    
+  });
 }
