@@ -22,11 +22,45 @@
   background-color: $color-white;
   height: 100%;
   width: 100%;
+  &__wrapper {
+    position: relative;
+    height: auto;
+    overflow-y: auto;
+    padding-top: 80px;
+  }
   &__close {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     z-index: 10;
+    width: 80px;
+    height: 80px;
+    background: pink;
+    span {
+      position: relative;
+      width: 28px;
+      height: 4px;
+      background: transparent;
+      display: inline-block;
+      vertical-align: middle;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background: #373737;
+        left: 0;
+      }
+      &::before {
+        top: -8px;
+        transform-origin: 0 0;
+        transform: translateX(90deg);
+      }
+      &::after {
+        top: 8px;
+        transform-origin: 0 100%;
+      }
+    }
   }
   &__contacts {
     text-align: center;
@@ -47,18 +81,24 @@
   }
   &__phones {
     margin-bottom: 15px;
+    a {
+      text-decoration: none;
+    }
   }
   &__btn {
     height: 40px;
     line-height: 40px;
   }
+  &.is-active {
+    z-index: 250;
+    display: block;
+  }
   @include media-breakpoint-up(xl) {
     display: block;
     background: rgba(241, 225, 213, 0.42);
     position: relative;
-  }
-  &.is-active {
-    z-index: 250;
-    display: block;
+    &__contacts, &__close {
+      display: none;
+    }
   }
 }
