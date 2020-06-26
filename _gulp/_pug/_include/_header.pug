@@ -24,19 +24,52 @@ header.header
             a(href="tel:") +7 499 189-73-88
           div
             a(href="tel:") +7 499 189-81-22
-        button(type="button").btn.header__btn заказать звонок
+        a(href="#modal").btn.header__btn.open-popup-link заказать звонок
         button(type="button").btn-mobile.j-btn-mobile
-          span
     
   .navigation
-    button(type="button").navigation__close
-      span
+    button(type="button").navigation__close.j-btn-mobile
     .navigation__wrapper
       .container
-        nav
+        nav(role="navigation")
           ul
-            li: a(href="#!") list
-            li: a(href="#!") list
+            li.has-folder
+              a(href="#!") 
+                span О нас
+                i.icon-arrow-down
+              ul.ul-folder
+                li: a(href="#!") О нас 
+                li.active: a(href="#!") Наша команда
+                li: a(href="#!") Фотогалерея
+            li: a(href="#!") Новости и акции
+            li.has-folder
+              a(href="#!") 
+                span Все процедуры
+                i.icon-arrow-down
+              ul.ul-folder
+                li: a(href="#!") О нас 
+                li: a(href="#!") Наша команда
+                li: a(href="#!") Фотогалерея
+            li.has-folder
+              a(href="#!") 
+                span Рекомендации
+                i.icon-arrow-down
+              ul.ul-folder
+                li: a(href="#!") О нас 
+                li: a(href="#!") Наша команда
+                li: a(href="#!") Фотогалерея
+            li.has-folder
+              a(href="#!") 
+                span Цены
+                i.icon-arrow-down
+              ul.ul-folder
+                li: a(href="#!") О нас 
+                li: a(href="#!") Наша команда
+                li: a(href="#!") Фотогалерея
+            li: a(href="#!")
+              span Отзывы
+            li: a(href="#!")
+              span Контакты
         .navigation__contacts
           .navigation__social
             a(href="#!")
@@ -52,6 +85,6 @@ header.header
               a(href="tel:") +7 499 189-73-88
             div
               a(href="tel:") +7 499 189-81-22
-          button(type="button").btn.navigation__btn заказать звонок
+          a(href="#modal").btn.navigation__btn.open-popup-link заказать звонок
 
 .header-holder

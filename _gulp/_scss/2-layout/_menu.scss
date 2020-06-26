@@ -24,9 +24,68 @@
   width: 100%;
   &__wrapper {
     position: relative;
-    height: auto;
+    height: 100%;
     overflow-y: auto;
     padding-top: 80px;
+    padding-bottom: 30px;
+    &>.container {
+      max-width: none;
+      padding: 0;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 80px;
+      font-weight: 500;
+      font-size: rem(24px);
+      ul {
+        li {
+          &>a, &>span {
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+            white-space: nowrap;
+            height: 50px;
+            line-height: 50px;
+            .icon-arrow-down {
+              font-size: rem(20px);
+              margin-left: 5px;
+              vertical-align: -7px;
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              &::before {
+                vertical-align: 8px;
+              }
+            }
+            &.active {
+              background: #F9F2ED;
+              &+.ul-folder {
+                display: block;
+              }
+            }
+          }
+          &.active {
+            &>a, &>span {
+              background: #F9F2ED;
+            }
+          }
+        }
+        ul {
+          display: none;
+          li {
+            &>a, &>span {
+              text-transform: none;
+            }
+            &.active {
+              &>a, &>span {
+                background: $add-color;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   &__close {
     position: fixed;
@@ -35,31 +94,15 @@
     z-index: 10;
     width: 80px;
     height: 80px;
-    background: pink;
-    span {
-      position: relative;
-      width: 28px;
-      height: 4px;
-      background: transparent;
+    background: transparent;
+    &::before {
+      font-size: rem(28px);
+      font-family: $font-icomoon;
+      color: #373737;
+      content: '\e901';
       display: inline-block;
       vertical-align: middle;
-      &::before, &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        background: #373737;
-        left: 0;
-      }
-      &::before {
-        top: -8px;
-        transform-origin: 0 0;
-        transform: translateX(90deg);
-      }
-      &::after {
-        top: 8px;
-        transform-origin: 0 100%;
-      }
+      line-height: 1;
     }
   }
   &__contacts {
@@ -93,12 +136,104 @@
     z-index: 250;
     display: block;
   }
+  @include media-breakpoint-up(sm) {
+    &__phones {
+      display: flex;
+      justify-content: center;
+      &>div {
+        &+div {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
   @include media-breakpoint-up(xl) {
     display: block;
     background: rgba(241, 225, 213, 0.42);
     position: relative;
     &__contacts, &__close {
       display: none;
+    }
+    &__wrapper {
+      padding: 0;
+      height: 73px;
+      overflow: visible;
+      &>.container {
+        max-width: 1298px;
+      }
+      nav {
+        font-size: rem(0px);
+        ul {
+          display: flex;
+          justify-content: space-between;
+          li {
+            display: inline-block;
+            position: relative;
+            &>a, &>span {
+              font-size: rem(18px);
+              height: 73px;
+              line-height: 73px;
+              .icon-arrow-down {
+                display: none;
+              }
+            }
+            &>a {
+              &:hover {
+                background: $add-color;
+              }
+            }
+            &.active {
+              &>a,&>span {
+                background: $add-color;
+              }
+            }
+            &.has-folder {
+              .ul-folder {
+                position: absolute;
+                display: none !important;
+                min-width: 334px;
+                top: 100%;
+                left: 0;
+                background: $color-white;
+                box-shadow: 0px 6px 10px rgba($color-black,.1);
+                display: block;
+                text-align: left;
+                li {
+                  display: block;
+                  &>a, &>span {
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 25px;
+                    background: none;
+                  }
+                  &>a {
+                    &:hover {
+                      background: #F9F2ED;
+                    }
+                  }
+                  &.active {
+                    &>a, &>span {
+                      background: #F9F2ED;
+                    }
+                  }
+                }
+              }
+              &:hover {
+                &>a,&>span {
+                  background: $add-color;
+                }
+                .ul-folder {
+                  display: block !important;
+                }
+              }
+            }
+          }
+          &>li {
+            flex-grow: 1;
+          }
+        }
+      }
     }
   }
 }

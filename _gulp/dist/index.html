@@ -11,11 +11,17 @@
         <meta name="format-detection" content="address=no">
         <meta name="format-detection" content="email=no">
         <meta content="notranslate" name="google">
-        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css"><link rel="stylesheet" href="https://i.icomoon.io/public/temp/271f783587/visavi/style.css">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="https://i.icomoon.io/public/temp/9e316a3b48/visavi/style.css">
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body>
         <!-- Preloader-->
+        <div class="modal mfp-hide" id="modal">
+            <div class="modal__wrapper">
+                <p>test</p>
+            </div>
+        </div>
         <!-- Header-->
         <header class="header">
             <div class="container">
@@ -31,20 +37,48 @@
                         <div class="header__phones">
                             <div><a href="tel:">+7 499 189-73-88</a></div>
                             <div><a href="tel:">+7 499 189-81-22</a></div>
-                        </div>
-                        <button class="btn header__btn" type="button">заказать звонок</button>
-                        <button class="btn-mobile j-btn-mobile" type="button"><span></span></button>
+                        </div><a class="btn header__btn open-popup-link" href="#modal">заказать звонок</a>
+                        <button class="btn-mobile j-btn-mobile" type="button"></button>
                     </div>
                 </div>
             </div>
             <div class="navigation">
-                <button class="navigation__close" type="button"><span></span></button>
+                <button class="navigation__close j-btn-mobile" type="button"></button>
                 <div class="navigation__wrapper">
                     <div class="container">
-                        <nav>
+                        <nav role="navigation">
                             <ul>
-                                <li><a href="#!">list</a></li>
-                                <li><a href="#!">list</a></li>
+                                <li class="has-folder"><a href="#!"> <span>О нас</span><i class="icon-arrow-down"></i></a>
+                                    <ul class="ul-folder">
+                                        <li><a href="#!">О нас </a></li>
+                                        <li class="active"><a href="#!">Наша команда</a></li>
+                                        <li><a href="#!">Фотогалерея</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">Новости и акции</a></li>
+                                <li class="has-folder"><a href="#!"> <span>Все процедуры</span><i class="icon-arrow-down"></i></a>
+                                    <ul class="ul-folder">
+                                        <li><a href="#!">О нас </a></li>
+                                        <li><a href="#!">Наша команда</a></li>
+                                        <li><a href="#!">Фотогалерея</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-folder"><a href="#!"> <span>Рекомендации</span><i class="icon-arrow-down"></i></a>
+                                    <ul class="ul-folder">
+                                        <li><a href="#!">О нас </a></li>
+                                        <li><a href="#!">Наша команда</a></li>
+                                        <li><a href="#!">Фотогалерея</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-folder"><a href="#!"> <span>Цены</span><i class="icon-arrow-down"></i></a>
+                                    <ul class="ul-folder">
+                                        <li><a href="#!">О нас </a></li>
+                                        <li><a href="#!">Наша команда</a></li>
+                                        <li><a href="#!">Фотогалерея</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!"><span>Отзывы</span></a></li>
+                                <li><a href="#!"><span>Контакты</span></a></li>
                             </ul>
                         </nav>
                         <div class="navigation__contacts">
@@ -52,8 +86,7 @@
                             <div class="navigation__phones">
                                 <div><a href="tel:">+7 499 189-73-88</a></div>
                                 <div><a href="tel:">+7 499 189-81-22</a></div>
-                            </div>
-                            <button class="btn navigation__btn" type="button">заказать звонок</button>
+                            </div><a class="btn navigation__btn open-popup-link" href="#modal">заказать звонок</a>
                         </div>
                     </div>
                 </div>
