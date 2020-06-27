@@ -196,7 +196,7 @@
   }
 }
 
-.content__navigation {
+.catalog-nav {
   text-transform: uppercase;
   font-size: rem(20px);
   &>ul {
@@ -264,6 +264,92 @@
   }
 }
 
+.services-nav {
+  text-transform: uppercase;
+  font-size: rem(18px);
+  margin-bottom: 20px;
+  &>ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      list-style: none;
+      position: relative;
+      background: $add-color;
+      &>a, &>span {
+        text-decoration: none;
+        display: block;
+        line-height: 1.2;
+        color: $color-black;
+        padding: 12px 50px 12px 70px;
+        font-weight: 500;
+      }
+      [class*="icon-arrow-"] {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        right: 0;
+        font-size: rem(20px);
+        top: 0px;
+        z-index: 5;
+        cursor: pointer;
+        transform-origin: 50%;
+        transform: rotate(0);
+      }
+      [class*="icon-services-"] {
+        position: absolute;
+        font-size: rem(31px);
+        color: rgba(68, 68, 68, 0.5);
+        top: 7px;
+        left: 20px;
+      }
+      ul {
+        text-transform: none;
+        display: none;
+        background: #fff;
+        padding: 0;
+        li {
+          background: transparent;
+          &>a, &>span {
+            padding: 8px 50px 8px 20px;
+          }
+          [class*="icon-"] {
+            height: 40px;
+            line-height: 40px;
+            top: 0;
+          }
+        }
+        ul {
+          background: $color-white;
+          li {
+            background: transparent;
+            &>a, &>span {
+              padding: 7px 50px 7px 20px;
+            }
+          }
+        }
+        &.ul-folder {
+          li.active {
+            &>a, &>span {
+              background: #F9F2ED;
+            }
+          }
+        }
+      }
+      &.has-folder {
+        margin-bottom: 20px;
+        &.active {
+          &>[class*="icon-arrow-"] {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
 .banner-row {
   position: relative;
   &::before {
@@ -293,6 +379,7 @@
       bottom: 15px;
       left: 10px;
       font-size: rem(26px);
+      text-shadow: 0px 4px 4px rgba($color-black,.25);
     }
   }
   @include media-breakpoint-up(sm) {
@@ -333,4 +420,113 @@
       bottom: 34px;
     }
   }
+}
+
+.modal {
+  text-align: center;
+  pointer-events: none;
+  &__wrapper {
+    pointer-events: all;
+    position: relative;
+    background: $color-white;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 633px;
+    width: 100%;
+    padding: 20px 25px 50px 25px;
+    box-shadow: 0px 10px 10px rgba($color-black,.25);
+  }
+  &__close {
+    position: absolute;
+    top: -50px;
+    right: -10px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    &::before {
+      font-size: rem(28px);
+      font-family: $font-icomoon;
+      color: $color-white;
+      content: '\e901';
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    &:hover {
+      &::before {
+        color: $primary-color;
+      }
+    }
+  }
+  &__head {
+    font-size: rem(30px);
+    font-family: $font-cormorant;
+    color: $color-black;
+    position: relative;
+    font-weight: 600;
+    text-align: center;
+    z-index: 5;
+    &::before {
+      height: 14px;
+      background-color: $add-color;
+      position: absolute;
+      right: 45px;
+      top: 22px;
+      content: '';
+      width: 228px;
+      z-index: -1;
+    }
+    .--senks & {
+      font-size: 64px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      display: inline-block;
+      &::before {
+        top: 46px;
+      }
+    }
+  }
+  &__content {
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .--senks & {
+      font-size: 20px;
+      text-align: center;
+      p {
+        line-height: 28px;
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__wrapper {
+      padding: 40px 45px 50px 45px;
+      &.--senks {
+        padding-top: 46px !important;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__head {
+      font-size: rem(36px);
+      &::before {
+        left: -25px;
+        right: auto;
+        top: 24px;
+      }
+    }
+    &__wrapper {
+      padding: 70px 90px 70px 90px;
+    }
+  }
+}
+
+.mfp-bg {
+  background: rgba(249, 242, 237, 0.7);
+  opacity: 1;
 }

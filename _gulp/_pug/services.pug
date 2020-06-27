@@ -1,0 +1,219 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Наши услуги' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Наши услуги' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-2.png", alt="").img-fluid
+          .h1 Наши услуги
+
+    // Content
+    .content
+      .container
+
+        .row
+          .col-12
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item.active(aria-current='page')
+                  span Услуги
+            .row
+              .col-12.col-md-6.col-lg-4.col-xl-4
+                nav.services-nav(role="navigation")
+                  ul
+                    li.has-folder
+                      a(href="#!") ДЕРМАТОЛОГИЯ
+                      i.icon-services-icon-1
+                      i.icon-arrow-down
+                      ul.ul-folder
+                        li: a(href="#!") Родинки (невусы) 
+                        li: a(href="#!") Лечение розацеа
+                        li: a(href="#!") Акне 
+                        li.has-folder
+                          a(href="#!") ПОДОЛОГИЯ (ЛЕЧЕНИЕ НОГТЕЙ)
+                          i.icon-arrow-down
+                          ul.ul-folder
+                            li: a(href="#!") Отслойка ногтевых пластин
+                            li: a(href="#!") Ортезы
+                            li: a(href="#!") Медицинский педикюр
+                            li: a(href="#!") Бородавки
+                            li: a(href="#!") Протезирование ногтей
+                            li: a(href="#!") Онихомикоз - Грибок
+                            li: a(href="#!") Деформация ногтя
+                            li: a(href="#!") Трещины на стопах
+                            li: a(href="#!") Гиперкератоз, натоптыши, мозоли
+                            li: a(href="#!") Вросшие ногти
+              .col-12.col-md-6.col-lg-4.col-xl-4
+                nav.services-nav(role="navigation")
+                  ul
+                    li.has-folder
+                      a(href="#!") Косметология
+                      i.icon-services-icon-2
+                      i.icon-arrow-down
+                      ul.ul-folder
+                        li: a(href="#!") Родинки (невусы) 
+                        li: a(href="#!") Лечение розацеа
+                        li: a(href="#!") Акне 
+                        li.has-folder
+                          a(href="#!") ПОДОЛОГИЯ (ЛЕЧЕНИЕ НОГТЕЙ)
+                          i.icon-arrow-down
+                          ul.ul-folder
+                            li: a(href="#!") Отслойка ногтевых пластин
+                            li: a(href="#!") Ортезы
+                            li: a(href="#!") Медицинский педикюр
+                            li: a(href="#!") Бородавки
+                            li: a(href="#!") Протезирование ногтей
+                            li: a(href="#!") Онихомикоз - Грибок
+                            li: a(href="#!") Деформация ногтя
+                            li: a(href="#!") Трещины на стопах
+                            li: a(href="#!") Гиперкератоз, натоптыши, мозоли
+                            li: a(href="#!") Вросшие ногти
+              .col-12.col-md-6.col-lg-4.col-xl-4
+                nav.services-nav(role="navigation")
+                  ul
+                    li.has-folder
+                      a(href="#!") МУЖЧИНАМ
+                      i.icon-services-icon-3
+                      i.icon-arrow-down
+                      ul.ul-folder
+                        li: a(href="#!") Родинки (невусы) 
+                        li: a(href="#!") Лечение розацеа
+                        li: a(href="#!") Акне 
+                        li.has-folder
+                          a(href="#!") ПОДОЛОГИЯ (ЛЕЧЕНИЕ НОГТЕЙ)
+                          i.icon-arrow-down
+                          ul.ul-folder
+                            li: a(href="#!") Отслойка ногтевых пластин
+                            li: a(href="#!") Ортезы
+                            li: a(href="#!") Медицинский педикюр
+                            li: a(href="#!") Бородавки
+                            li: a(href="#!") Протезирование ногтей
+                            li: a(href="#!") Онихомикоз - Грибок
+                            li: a(href="#!") Деформация ногтя
+                            li: a(href="#!") Трещины на стопах
+                            li: a(href="#!") Гиперкератоз, натоптыши, мозоли
+                            li: a(href="#!") Вросшие ногти
+              .col-12.col-md-6.col-lg-4.col-xl-4
+                nav.services-nav(role="navigation")
+                  ul
+                    li.has-folder
+                      a(href="#!") ФЛЕБОЛОГИЯ
+                      i.icon-services-icon-4
+                      i.icon-arrow-down
+                      ul.ul-folder
+                        li: a(href="#!") Родинки (невусы) 
+                        li: a(href="#!") Лечение розацеа
+                        li: a(href="#!") Акне 
+                        li.has-folder
+                          a(href="#!") ПОДОЛОГИЯ (ЛЕЧЕНИЕ НОГТЕЙ)
+                          i.icon-arrow-down
+                          ul.ul-folder
+                            li: a(href="#!") Отслойка ногтевых пластин
+                            li: a(href="#!") Ортезы
+                            li: a(href="#!") Медицинский педикюр
+                            li: a(href="#!") Бородавки
+                            li: a(href="#!") Протезирование ногтей
+                            li: a(href="#!") Онихомикоз - Грибок
+                            li: a(href="#!") Деформация ногтя
+                            li: a(href="#!") Трещины на стопах
+                            li: a(href="#!") Гиперкератоз, натоптыши, мозоли
+                            li: a(href="#!") Вросшие ногти
+              .col-12.col-md-6.col-lg-4.col-xl-4
+                nav.services-nav(role="navigation")
+                  ul
+                    li.has-folder
+                      a(href="#!") ГИНЕКОЛОГИЯ
+                      i.icon-services-icon-5
+                      i.icon-arrow-down
+                      ul.ul-folder
+                        li: a(href="#!") Родинки (невусы) 
+                        li: a(href="#!") Лечение розацеа
+                        li: a(href="#!") Акне 
+                        li.has-folder
+                          a(href="#!") ПОДОЛОГИЯ (ЛЕЧЕНИЕ НОГТЕЙ)
+                          i.icon-arrow-down
+                          ul.ul-folder
+                            li: a(href="#!") Отслойка ногтевых пластин
+                            li: a(href="#!") Ортезы
+                            li: a(href="#!") Медицинский педикюр
+                            li: a(href="#!") Бородавки
+                            li: a(href="#!") Протезирование ногтей
+                            li: a(href="#!") Онихомикоз - Грибок
+                            li: a(href="#!") Деформация ногтя
+                            li: a(href="#!") Трещины на стопах
+                            li: a(href="#!") Гиперкератоз, натоптыши, мозоли
+                            li: a(href="#!") Вросшие ногти
+              .col-12.col-md-6.col-lg-4.col-xl-4
+                nav.services-nav(role="navigation")
+                  ul
+                    li.has-folder
+                      a(href="#!") СТОМАТОЛОГИЯ
+                      i.icon-services-icon-6
+                      i.icon-arrow-down
+                      ul.ul-folder
+                        li: a(href="#!") Родинки (невусы) 
+                        li: a(href="#!") Лечение розацеа
+                        li: a(href="#!") Акне 
+                        li.has-folder
+                          a(href="#!") ПОДОЛОГИЯ (ЛЕЧЕНИЕ НОГТЕЙ)
+                          i.icon-arrow-down
+                          ul.ul-folder
+                            li: a(href="#!") Отслойка ногтевых пластин
+                            li: a(href="#!") Ортезы
+                            li: a(href="#!") Медицинский педикюр
+                            li: a(href="#!") Бородавки
+                            li: a(href="#!") Протезирование ногтей
+                            li: a(href="#!") Онихомикоз - Грибок
+                            li: a(href="#!") Деформация ногтя
+                            li: a(href="#!") Трещины на стопах
+                            li: a(href="#!") Гиперкератоз, натоптыши, мозоли
+                            li: a(href="#!") Вросшие ногти
+              .col-12.col-md-6.col-lg-4.col-xl-4
+                nav.services-nav(role="navigation")
+                  ul
+                    li.has-folder
+                      a(href="#!") ДИАГНОСТИКА
+                      i.icon-services-icon-7
+                      i.icon-arrow-down
+                      ul.ul-folder
+                        li: a(href="#!") Родинки (невусы) 
+                        li: a(href="#!") Лечение розацеа
+                        li: a(href="#!") Акне 
+                        li.has-folder
+                          a(href="#!") ПОДОЛОГИЯ (ЛЕЧЕНИЕ НОГТЕЙ)
+                          i.icon-arrow-down
+                          ul.ul-folder
+                            li: a(href="#!") Отслойка ногтевых пластин
+                            li: a(href="#!") Ортезы
+                            li: a(href="#!") Медицинский педикюр
+                            li: a(href="#!") Бородавки
+                            li: a(href="#!") Протезирование ногтей
+                            li: a(href="#!") Онихомикоз - Грибок
+                            li: a(href="#!") Деформация ногтя
+                            li: a(href="#!") Трещины на стопах
+                            li: a(href="#!") Гиперкератоз, натоптыши, мозоли
+                            li: a(href="#!") Вросшие ногти
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

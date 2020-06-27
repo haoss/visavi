@@ -18,7 +18,7 @@ html, body {
 
 body {
   // background-color: alpha(var(--color-primary), 1);
-  background: $color-white;
+  background: $color-white url('../images/bg.png') center 0 no-repeat;
   font-size: rem(16px);
   font-family: $font-montserrat;
   color: $primary-color;
@@ -27,6 +27,9 @@ body {
   -webkit-text-size-adjust: 100%;
   @include media-breakpoint-up(md) {
     font-size: rem(20px);
+  }
+  @include media-breakpoint-up(xl) {
+    background-position: center 215px;
   }
   &.is-fixed {
     overflow: hidden;

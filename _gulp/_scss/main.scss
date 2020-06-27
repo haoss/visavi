@@ -68,6 +68,7 @@ $container-max-widths: (
 @import "2-layout/_header.scss";
 @import "2-layout/_footer.scss";
 
+@import "../dist/js/libs/magnific-popup/magnific-popup.scss";
 // @import "3-modules/_slick.scss";
 // @import "3-modules/_slick-theme.scss";
 @import "3-modules/_modules.scss";

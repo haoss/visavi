@@ -62,9 +62,14 @@ $(document).on('ready', function(){
     }
   });
 
+  $('.modal__close').on('click', function() {
+    $.magnificPopup.close();
+  });
+
   collapseNavigation();
   headerScroll();
   mobileNav();
+  inputMaskTest();
 
   // Chrome Smooth Scroll
   try {
@@ -141,5 +146,12 @@ function mobileNav() {
       navigation.addClass('is-active');
       body.addClass('is-fixed');
     }
+  });
+}
+
+function inputMaskTest() {
+  var localMask = $('.j-mask-local');
+  localMask.each(function () {
+    $(this).mask("+ 7-(999)-999-99-99");
   });
 }

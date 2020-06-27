@@ -23,6 +23,10 @@ button {
     background: #ECCFB9;
     box-shadow: inset 0px 7px 6px rgba($color-black,.1);
   }
+  &--block {
+    display: block;
+    width: 100%;
+  }
 }
 
 .btn-mobile {
