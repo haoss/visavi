@@ -66,15 +66,11 @@ $(document).on('ready', function(){
     $.magnificPopup.close();
   });
 
-  $('.our-team__carousel').slick({
-    mobileFirst: true,
-    dots: true
-  });
-
   collapseNavigation();
   headerScroll();
   mobileNav();
-  inputMaskTest();
+  inputMask();
+  teamCarousel();
 
   // Chrome Smooth Scroll
   try {
@@ -106,6 +102,8 @@ $(window).on('resize', function() {
     navigation.removeClass('is-active');
     body.removeClass('is-fixed');
   }
+
+  teamCarousel();
 });
 
 function collapseNavigation() {
@@ -154,9 +152,25 @@ function mobileNav() {
   });
 }
 
-function inputMaskTest() {
+function inputMask() {
   var localMask = $('.j-mask-local');
   localMask.each(function () {
     $(this).mask("+ 7-(999)-999-99-99");
   });
+}
+
+function teamCarousel() {
+  var width = $(window).width();
+  var teamCarousel = $('.our-team__carousel');
+
+  if (width <= 740) {
+    teamCarousel.not('.slick-initialized').slick({
+      mobileFirst: true,
+      dots: true
+    });
+  } else {
+    if(teamCarousel.hasClass('slick-initialized')){
+      teamCarousel.slick('unslick');
+    }
+  }
 }

@@ -1,0 +1,89 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Дерматология' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Дерматология' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-4.png", alt="").img-fluid
+          .h1 Дерматология
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item
+                  a(href='#!') Услуги
+                li.breadcrumb-item.active(aria-current='page')
+                  span Дерматология
+
+            .content__document.--one-services
+              h1 Дерматология
+              p Как правило к врачу-дерматологу обращаются пациенты с ярко выраженными поражениями кожи. Пытаясь самостоятельно решить проблему, заболевший теряет время и деньги на неэффективные методы лечения, в лучшем случае облегчая симптомы болезни, но не решая причину. В худшем -усугубляя свое состояние кожи. Поэтому, если Вы заметили любые аномальные высыпания, новообразования на коже – незамедлительно обращайтесь к врачу-дерматологу, дерматовенерологу!
+              p Если причина патологии кожи кроется во внутренних расстройствах организма (поражение эндокринной системы (в том числе гормональные сбои), болезни желудочно-кишечного тракта, аллергические реакции), наши врачи-дерматовенерологи профессор Волкова Елена Николаевна и кандидат медицинских наук Песков Дмитрий Алексеевич назначат лабораторные исследования и лечение.
+
+              .clear
+
+              .one-services__list
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      img(src="./tmp/team-img-1.png", alt="")
+                    .one-services__block-content
+                      h2 Наталья Михайловна
+                      p Генеральный директор
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      img(src="./tmp/team-img-2.png", alt="")
+                    .one-services__block-content
+                      h2 Марина Тарабукина
+                      p Косметолог (Стаж 17 лет)
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      img(src="./tmp/team-img-3.png", alt="")
+                    .one-services__block-content
+                      h2 Майя Закерова
+                      p Врач-косметолог (стаж 15 лет)
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      img(src="./tmp/team-img-4.png", alt="")
+                    .one-services__block-content
+                      h2 Лариса Юрьева
+                      p Косметолог (стаж 15 лет)
+
+              a(href="#!").btn.content__btn загрузить еще
+
+
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
