@@ -66,6 +66,10 @@ $(document).on('ready', function(){
     $.magnificPopup.close();
   });
 
+  $('.our-team__carousel').slick({
+
+  });
+
   collapseNavigation();
   headerScroll();
   mobileNav();

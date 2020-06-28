@@ -1,0 +1,118 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Наша команда' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Наша команда' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-3.png", alt="").img-fluid
+          .h1 Наша команда
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item
+                  a(href='#!') О нас
+                li.breadcrumb-item.active(aria-current='page')
+                  span Наша команда
+
+            .our-team
+              h1 
+                span Наша команда
+
+              nav.our-team__nav
+                ul
+                  li: a(href="#!") Косметология
+                  li.active: a(href="#!") Маникюр и педикюр
+                  li: a(href="#!") Парикмахерский зал
+                  li: a(href="#!") Уход за телом
+                  li: a(href="#!") Администрация
+                  li: a(href="#!") Ламинирование ресниц/бровей
+                  li: a(href="#!") Татуаж и микроблейдинг
+
+              .our-team__carousel
+                .our-team__block
+                  .our-team__block-thumb
+                    img(src="", alt="")
+                  .our-team__block-content
+                    .h3 Наталья Михайловна
+                    p Генеральный директор
+                .our-team__block
+                  .our-team__block-thumb
+                    img(src="", alt="")
+                  .our-team__block-content
+                    .h3 Марина Тарабукина
+                    p Косметолог (Стаж 17 лет)
+                .our-team__block
+                  .our-team__block-thumb
+                    img(src="", alt="")
+                  .our-team__block-content
+                    .h3 Майя Закерова
+                    p Врач-косметолог (стаж 15 лет)
+                .our-team__block
+                  .our-team__block-thumb
+                    img(src="", alt="")
+                  .our-team__block-content
+                    .h3 Лариса Юрьева
+                    p Косметолог (стаж 15 лет)
+                .our-team__block
+                  .our-team__block-thumb
+                    img(src="", alt="")
+                  .our-team__block-content
+                    .h3 Наталья Рындина
+                    p Мастер ногтевого сервиса
+                .our-team__block
+                  .our-team__block-thumb
+                    img(src="", alt="")
+                  .our-team__block-content
+                    .h3 Марина Климова
+                    p Мастер ногтевого сервиса
+                .our-team__block
+                  .our-team__block-thumb
+                    img(src="", alt="")
+                  .our-team__block-content
+                    .h3 Елена Храмова
+                    p Парикмахер-стилист
+                .our-team__block
+                  .our-team__block-thumb
+                    img(src="", alt="")
+                  .our-team__block-content
+                    .h3 Юрий Сапалёв
+                    p Парикмахер-стилист
+                .our-team__block
+                  .our-team__block-thumb
+                    img(src="", alt="")
+                  .our-team__block-content
+                    .h3 Татьяна Дозорцева
+                    p Парикмахер-стилист, визажист
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
