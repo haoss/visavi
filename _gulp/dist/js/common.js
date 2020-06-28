@@ -67,7 +67,8 @@ $(document).on('ready', function(){
   });
 
   $('.our-team__carousel').slick({
-
+    mobileFirst: true,
+    dots: true
   });
 
   collapseNavigation();
