@@ -71,6 +71,7 @@ $(document).on('ready', function(){
   mobileNav();
   inputMask();
   teamCarousel();
+  collapseTable();
 
   // Chrome Smooth Scroll
   try {
@@ -109,7 +110,7 @@ $(window).on('resize', function() {
 function collapseNavigation() {
   var li = $('.has-folder'),
       ul = $('.ul-folder'),
-      icon = $('.icon-arrow-down')
+      icon = $('.has-folder .icon-arrow-down')
   ;
 
   icon.each(function(){
@@ -173,4 +174,13 @@ function teamCarousel() {
       teamCarousel.slick('unslick');
     }
   }
+}
+
+function collapseTable() {
+  var btn = $('.j-table-icon');
+
+  btn.on('click', function(e) {
+    var _this = $(this);
+    $(this).parents('tr').next('.j-table-content').toggle();
+  })
 }

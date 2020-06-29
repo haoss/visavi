@@ -1,0 +1,108 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Подология' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Подология' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-5.png", alt="").img-fluid
+          .h1 Подология
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item
+                  a(href='#!') Услуги
+                li.breadcrumb-item
+                  a(href='#!') Дерматология
+                li.breadcrumb-item.active(aria-current='page')
+                  span Подология
+
+            .content__document.--one-services
+              h1 Подология
+              p Чтобы женщину хотелось носить на руках, она должна выглядеть безупречно до кончиков ногтей. И одним педикюром сейчас не отделаться: на ухоженность ног обращают не меньше внимания, чем на состояние рук. Если стопы выглядят идеально, подчеркнуть их красоту поможет обычный гигиенический педикюр. Но при патологических изменениях кожи стоп добиться эффектного вида ножек гораздо труднее. Сначала нужно справиться с проблемой, а потом наводить лоск: шлифовать пятки и покрывать ноготки лаком. Такой вид ухода получил название медицинского педикюра и в последнее время пользуется огромным спросом у столичных жительниц. Мастер, который на нем специализируется, называется подологом, а раздел эстетической медицины, охватывающий все проблемы стоп – подологией (от греч. «podo» – стопа).
+
+              .clear10
+
+              .one-services__list
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-1.png", alt="")
+                    .one-services__block-content
+                      h2
+                        a(href="#!") Отслойка ногтевых пластин
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-1.png", alt="")
+                    .one-services__block-content
+                      h2
+                        a(href="#!") Ортезы
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-3.png", alt="")
+                    .one-services__block-content
+                      h2
+                        a(href="#!") Медицинский педикюр
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-4.png", alt="")
+                    .one-services__block-content
+                      h2
+                        a(href="#!") Бородавки
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-5.png", alt="")
+                    .one-services__block-content
+                      h2
+                        a(href="#!") Протезирование ногтей
+                div
+                  .one-services__block
+                    .one-services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-6.png", alt="")
+                    .one-services__block-content
+                      h2
+                        a(href="#!") Онихомикоз - Грибок
+
+              a(href="#!").btn.content__btn загрузить еще
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

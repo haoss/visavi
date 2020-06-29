@@ -1,0 +1,454 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Акне' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Акне' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-6.png", alt="").img-fluid
+          h1 Акне
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item
+                  a(href='#!') Услуги
+                li.breadcrumb-item
+                  a(href='#!') Дерматология
+                li.breadcrumb-item.active(aria-current='page')
+                  span Акне
+
+            .content__document
+              h2 Акне - как избавиться от прыщей
+              p Угри (угревая сыпь, акне) — это хроническое воспалительное заболевание сальных желез, возникающее в результате их закупорки и повышенной выработки кожного сала. Угревая сыпь может возникать по множеству различных причин. Именно поэтому при ее появлении стоит обратиться к дерматологу — врач Визави выяснит, что именно привело к появлению угрей и назначит соответствующее лечение.Если окажется, что угревая сыпь вызвана гормональными нарушениями, вам потребуется также консультация эндокринолога. Косметолог, в свою очередь, поможет избавиться от внешних проявлений заболевания.
+
+            .one-services__how
+              h2 Как проходит процедура в Визави
+              p Лечение угрей назначается в зависимости от тяжести течения болезни. Различают три степени тяжести угревой сыпи: 
+              ul
+                li
+                  del Легкая 
+                  | — при наличии закрытых или открытых угрей практически без признаков воспаления. На коже лица имеется менее 10 подобных элементов; 
+                li 
+                  del Средняя 
+                  | — от 10 до 40 угревых элементов на коже лица;  
+                li 
+                  del Тяжелая 
+                  | — более 40 угревых элементов на коже лица — как правило, воспаленных, гнойных.
+              p Для лечения кожи от угрей проводят пилинг — удаление поверхностных слоев кожи с помощью слабых растворов кислот (химический пилинг) или лазерный пилинг. Также для борьбы с угревой сыпью применяется чистка лица HydraFacial, и лазеротерапия на отдельные невоспаленные угри (CO2-лазер).
+
+            .one-services__what
+              h2 Что входит в процедуру
+              table
+                tbody
+                  tr
+                    td
+                      .one-services__what-number 1
+                    td
+                      p Консультация врача-дерматолога, косметолога со сбором жалоб и анемнеза (в том числе уточняются аллергические реакции).
+                  tr
+                    td
+                      .one-services__what-number 2
+                    td
+                      p Осмотр.
+                  tr
+                    td
+                      .one-services__what-number 3
+                    td
+                      p Назначение анализов.
+                  tr
+                    td
+                      .one-services__what-number 4
+                    td
+                      p Рекомендации, назначения, составления плана лечения.
+              p В салоне Визави комплексный подход к проблеме акне. Мы гарантируем, что при соблюдении плана лечения Вы достигните желаемого результата - красивая, здоровая кожа.
+
+            .one-services__price
+              h2 Цены
+              .table-responsive
+                table
+                  thead
+                    tr
+                      th Наименование процедуры
+                      th(align="right") Цена
+                      th.last &nbsp;
+                  tbody
+                    tr
+                      td Процедура
+                      td(align="right") 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+                    tr.tr-even
+                      td Процедура
+                      td(align="right") 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+                    tr
+                      td Процедура
+                      td(align="right") 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+                    tr.tr-even
+                      td Процедура
+                      td(align="right") 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+
+            .one-services__team
+              h2 Проффесионалы отвечающие за услугу
+              .one-services__team-row
+                .one-services__team-wrapper
+                  div
+                    .our-team__block
+                      .our-team__block-thumb
+                        img(src="./tmp/team-img-1.png", alt="")
+                      .our-team__block-content
+                        h2 Наталья Михайловна
+                        p Генеральный директор
+                  div
+                    .our-team__block
+                      .our-team__block-thumb
+                        img(src="./tmp/team-img-2.png", alt="")
+                      .our-team__block-content
+                        h2 Марина Тарабукина
+                        p Косметолог (Стаж 17 лет)
+                  div
+                    .our-team__block
+                      .our-team__block-thumb
+                        img(src="./tmp/team-img-3.png", alt="")
+                      .our-team__block-content
+                        h2 Майя Закерова
+                        p Врач-косметолог (стаж 15 лет)
+
+            .one-services__form
+              .one-services__form-wrapper
+                div.first.d-none.d-md-block
+                  .one-services__form-img
+                    img(src="./tmp/services-img-form.png", alt="")
+                div.last
+                  h2 Запишитесь на процедуру сейчас
+                  form(action="#!")
+                    .form-group
+                      +field-text({
+                        title: '',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'field-name',
+                          placeholder: 'Ваше имя',
+                        }
+                      })
+                    .form-group
+                      +field-text({
+                        title: '',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'field-phone',
+                          placeholder: '+ 7-(___)-___-__-__',
+                          class: 'j-mask-local'
+                        }
+                      })
+                    .row
+                      .col-12.col-sm-3
+                        .form-group
+                          +field-select(
+                            {
+                              title: '',
+                              helpText: '',
+                              hasJs: false,
+                              hasError: false,
+                              mods: ''
+                            },
+                            {
+                              name: 'form-day',
+                              id: 'form-day'
+                            },
+                            [
+                              {
+                                title: 'День',
+                                attrs: {
+                                  selected: true,
+                                  hidden: true
+                                }
+                              },
+                              {
+                                title: 'Пн.',
+                                attrs: {
+                                  value: 'Понедельник',
+                                }
+                              },
+                              {
+                                title: 'Вт.',
+                                attrs: {
+                                  value: 'Вторник',
+                                }
+                              },
+                              {
+                                title: 'Ср.',
+                                attrs: {
+                                  value: 'Среда',
+                                }
+                              },
+                              {
+                                title: 'Чт.',
+                                attrs: {
+                                  value: 'Четверг',
+                                }
+                              },
+                              {
+                                title: 'Пт.',
+                                attrs: {
+                                  value: 'Пятница',
+                                }
+                              },
+                              {
+                                title: 'Сб.',
+                                attrs: {
+                                  value: 'Суббота',
+                                }
+                              },
+                              {
+                                title: 'Вс.',
+                                attrs: {
+                                  value: 'Воскресенье',
+                                }
+                              },
+                            ]
+                          )
+                      .col-12.col-sm-5
+                        .form-group
+                          +field-select(
+                            {
+                              title: '',
+                              helpText: '',
+                              hasJs: false,
+                              hasError: false,
+                              mods: ''
+                            },
+                            {
+                              name: 'form-month',
+                              id: 'form-month'
+                            },
+                            [
+                              {
+                                title: 'Месяц',
+                                attrs: {
+                                  selected: true,
+                                  hidden: true
+                                }
+                              },
+                              {
+                                title: 'Январь',
+                                attrs: {
+                                  value: 'Январь',
+                                }
+                              },
+                              {
+                                title: 'Февраль',
+                                attrs: {
+                                  value: 'Февраль',
+                                }
+                              },
+                              {
+                                title: 'Март',
+                                attrs: {
+                                  value: 'Март',
+                                }
+                              },
+                              {
+                                title: 'Апрель',
+                                attrs: {
+                                  value: 'Апрель',
+                                }
+                              },
+                              {
+                                title: 'Май',
+                                attrs: {
+                                  value: 'Май',
+                                }
+                              },
+                              {
+                                title: 'Июнь',
+                                attrs: {
+                                  value: 'Июнь',
+                                }
+                              },
+                              {
+                                title: 'Июль',
+                                attrs: {
+                                  value: 'Июль',
+                                }
+                              },
+                              {
+                                title: 'Август',
+                                attrs: {
+                                  value: 'Август',
+                                }
+                              },
+                              {
+                                title: 'Сентябрь',
+                                attrs: {
+                                  value: 'Сентябрь',
+                                }
+                              },
+                              {
+                                title: 'Октябрь',
+                                attrs: {
+                                  value: 'Октябрь',
+                                }
+                              },
+                              {
+                                title: 'Ноябрь',
+                                attrs: {
+                                  value: 'Ноябрь',
+                                }
+                              },
+                              {
+                                title: 'Декабрь',
+                                attrs: {
+                                  value: 'Декабрь',
+                                }
+                              }
+                            ]
+                          )
+                      .col-12.col-sm-4
+                        .form-group
+                          +field-select(
+                            {
+                              title: '',
+                              helpText: '',
+                              hasJs: false,
+                              hasError: false,
+                              mods: ''
+                            },
+                            {
+                              name: 'form-time',
+                              id: 'form-time'
+                            },
+                            [
+                              {
+                                title: 'Время',
+                                attrs: {
+                                  selected: true,
+                                  hidden: true
+                                }
+                              },
+                              {
+                                title: '09:00-10:00',
+                                attrs: {
+                                  value: '09:00-10:00',
+                                }
+                              },
+                              {
+                                title: '10:00-11:00',
+                                attrs: {
+                                  value: '10:00-11:00',
+                                }
+                              },
+                              {
+                                title: '11:00-12:00',
+                                attrs: {
+                                  value: '11:00-12:00',
+                                }
+                              },
+                              {
+                                title: '12:00-13:00',
+                                attrs: {
+                                  value: '12:00-13:00',
+                                }
+                              },
+                              {
+                                title: '13:00-14:00',
+                                attrs: {
+                                  value: '13:00-14:00',
+                                }
+                              },
+                              {
+                                title: '14:00-15:00',
+                                attrs: {
+                                  value: '14:00-15:00',
+                                }
+                              },
+                              {
+                                title: '15:00-16:00',
+                                attrs: {
+                                  value: '15:00-16:00',
+                                }
+                              },
+                              {
+                                title: '16:00-17:00',
+                                attrs: {
+                                  value: '16:00-17:00',
+                                }
+                              },
+                              {
+                                title: '17:00-18:00',
+                                attrs: {
+                                  value: '17:00-18:00',
+                                }
+                              }
+                            ]
+                          )
+                    .form-group.mb20
+                      +field-checkbox({
+                        title: 'Даю согласие на обработку персональных данных',
+                        isLink: false,
+                        mods: '',
+                        attrs: {
+                          name: 'field-checkbox',
+                          checked: false,
+                        }
+                      })
+                    button(type="button").btn.btn--block записаться на прием
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
