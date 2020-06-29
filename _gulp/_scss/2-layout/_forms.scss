@@ -558,13 +558,13 @@ textarea.field-text__input {
     display: block;
     width: 100%;
     height: 50px;
-    padding: 6px 36px 6px 0px;
+    padding: 6px 20px 6px 0px;
     line-height: 1.42857143;
     color: $primary-color;
     background: {
       color: $color-white;
       repeat: no-repeat;
-      position: calc(100% - 10px) center;
+      position: 100% center;
       image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuMjkyODkgNi4yOTI4OUMzLjY4MzQyIDUuOTAyMzcgNC4zMTY1OCA1LjkwMjM3IDQuNzA3MTEgNi4yOTI4OUwxMCAxMS41ODU4TDE1LjI5MjkgNi4yOTI4OUMxNS42ODM0IDUuOTAyMzcgMTYuMzE2NiA1LjkwMjM3IDE2LjcwNzEgNi4yOTI4OUMxNy4wOTc2IDYuNjgzNDIgMTcuMDk3NiA3LjMxNjU4IDE2LjcwNzEgNy43MDcxMUwxMC43MDcxIDEzLjcwNzFDMTAuMzE2NiAxNC4wOTc2IDkuNjgzNDIgMTQuMDk3NiA5LjI5Mjg5IDEzLjcwNzFMMy4yOTI4OSA3LjcwNzExQzIuOTAyMzcgNy4zMTY1OCAyLjkwMjM3IDYuNjgzNDIgMy4yOTI4OSA2LjI5Mjg5WiIgZmlsbD0iYmxhY2siLz48L3N2Zz4=);
       size: 17px 17px;
     }

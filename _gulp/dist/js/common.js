@@ -66,6 +66,21 @@ $(document).on('ready', function(){
     $.magnificPopup.close();
   });
 
+  $('.look__carousel').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    touchMove: false,
+    draggable: false,
+    infinite: true,
+    swipe: false,
+    variableWidth: true,
+    prevArrow: '.one-services__gallery-carousel .look__btn-left',
+    nextArrow: '.one-services__gallery-carousel .look__btn-right'
+  });
+
+  $(".before-after").twentytwenty();
+
   collapseNavigation();
   headerScroll();
   mobileNav();
