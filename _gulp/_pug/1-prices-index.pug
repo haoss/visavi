@@ -1,0 +1,148 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Цены дерматолог' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Цены дерматолог' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-8.png", alt="").img-fluid
+          .h1 Цены
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item
+                  a(href='#!') Цены
+                li.breadcrumb-item.active(aria-current='page')
+                  span Дерматолог
+
+            .one-services__price.--h2-v2
+              h2 Цены дерматолог
+              
+              .table-responsive
+                table
+                  thead
+                    tr
+                      th.text-uppercase.nowrap
+                        b Лазерное омоложение, шлифовка
+                      th(align="right").text-uppercase
+                        b Цена
+                      th.last &nbsp;
+                  tbody
+                    tr
+                      td Процедура
+                      td(align="right").nowrap
+                        span.span 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+                    tr.tr-even
+                      td Процедура
+                      td(align="right").nowrap
+                        span.span 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+                    tr
+                      td Процедура
+                      td(align="right").nowrap
+                        //- del 6 000 RUB
+                        span.span 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+                    tr.tr-even
+                      td Процедура
+                      td(align="right").nowrap
+                        span.span 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+
+              .table-responsive
+                table
+                  thead
+                    tr
+                      th.text-uppercase.nowrap
+                        b Лазерное удаление бородавок
+                      th(align="right").text-uppercase
+                        b Цена
+                      th.last &nbsp;
+                  tbody
+                    tr
+                      td Процедура
+                      td(align="right").nowrap
+                        del 6 000 RUB
+                        span.span 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+                    tr.tr-even
+                      td Процедура
+                      td(align="right").nowrap
+                        span.span 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+                    tr
+                      td Процедура
+                      td(align="right").nowrap
+                        //- del 6 000 RUB
+                        span.span 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content(style="display: table-row")
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+                    tr.tr-even
+                      td Процедура
+                      td(align="right").nowrap
+                        span.span 3 000 RUB
+                      td.last
+                        i.icon-arrow-down.j-table-icon
+                    tr.tr-content.j-table-content
+                      td(colspan="3")
+                        p Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. 
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
