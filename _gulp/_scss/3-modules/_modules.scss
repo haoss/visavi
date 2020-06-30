@@ -1508,7 +1508,7 @@
         width: 228px;
         z-index: -1;
       }
-    }
+    }    
   }
   &__gallery {
     margin-bottom: 20px;
@@ -1934,6 +1934,18 @@
         }
       }
     }
+    &__form {
+      &.--contacts {
+        .h2, h2 {
+          font-size: rem(36px);
+          &::before {
+            top: 18px;
+            left: auto;
+            right: -5px;
+          }
+        }
+      }
+    }
   }
   @include media-breakpoint-up(md) {
     &__block {
@@ -2020,8 +2032,27 @@
             }
           }
           form {
-            padding-left: 150px;
+            margin-left: 150px;
+            width: 412px;
           }
+        }
+      }
+      &.--contacts {
+        min-height: auto;
+        .h2, h2 {
+          text-align: right;
+          float: right;
+          display: inline-block;
+          &::before {
+            right: auto;
+            left: -32px;
+          }
+        }
+        img {
+          width: 310px;
+        }
+        .one-services__form-img {
+          right: -130px;
         }
       }
     }
@@ -2215,9 +2246,20 @@
             float: right;
           }
           form {
+            width: auto;
             clear: both;
-            padding-right: 85px;
+            margin-right: 85px;
           }
+        }
+      }
+      &.--contacts {
+        form {
+          padding-right: 0;
+          margin-right: 20px;
+        }
+        .one-services__form-img {
+          right: -60px;
+          top: 0;
         }
       }
     }
@@ -2268,13 +2310,26 @@
       &-wrapper {
         .last {
           form {
-            padding-right: 60px;
-            padding-left: 95px;
+            margin-right: 60px;
+            margin-left: 95px;
           }
         }
       }
       &-img {
         right: -40px;
+      }
+      &.--contacts {
+        form {
+          width: 412px;
+          margin-right: 80px;
+          margin-left: 155px;
+        }
+        h2, .h2 {
+          margin-right: 64px;
+        }
+        img {
+          width: 364px;
+        }
       }
     }
     &__gallery {

@@ -1,0 +1,99 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Контакты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Контакты' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-12.png", alt="").img-fluid
+          h1 Контакты
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item.active(aria-current='page')
+                  span Контакты
+
+            p Приглашаем Вас посетить процедуры по уходу за собой, отличающиеся профессионализмом мастеров и современным оборудованием. Мы продолжаем непрерывно совершенствоваться и расширять перечень услуг.
+
+            .clear20
+
+            .one-services__form.--contacts
+              .one-services__form-wrapper
+                div.first.d-none.d-md-block
+                  .one-services__form-img
+                    img(src="./tmp/contacts-img-form.png", alt="")
+                div.last
+                  h2 Заказать обратный звонок
+                  form(action="#!")
+                    .form-group
+                      +field-text({
+                        title: '',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'field-name',
+                          placeholder: 'Ваше имя',
+                        }
+                      })
+                    .form-group
+                      +field-text({
+                        title: '',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'field-phone',
+                          placeholder: '+ 7-(___)-___-__-__',
+                          class: 'j-mask-local'
+                        }
+                      })
+                    .form-group.mb20
+                      +field-checkbox({
+                        title: 'Даю согласие на обработку персональных данных',
+                        isLink: false,
+                        mods: '',
+                        attrs: {
+                          name: 'field-checkbox',
+                          checked: false,
+                        }
+                      })
+                    button(type="button").btn.btn--block заказать звонок
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
