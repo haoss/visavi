@@ -1,0 +1,143 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Вакансии' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Вакансии' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-10.png", alt="").img-fluid
+          h1 Вакансии
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item
+                  a(href='#!') О нас
+                li.breadcrumb-item.active(aria-current='page')
+                  span Вакансии
+
+            .collapse
+              .collapse__head.j-collapse Дерматолог
+                i.icon-arrow-down
+              .collapse__content
+                .collapse__content-wrapper
+                  p Требуемый опыт работы: 3–6 лет 
+                  p Полная занятость, сменный график 
+                  p
+                    b Обязанности: 
+                  ul
+                    li Консультирование первичных клиентов. 
+                    li Выполнение процедур: 
+                    li Инъекционные методики: 
+                    li Контурная пластика губ, скул, нижней трети лица, носослезной борозды, ботокс, диспорт, ксеомин. 
+                    li Знание аппаратов LightSheerDuet, M22 (IPL), ДЕКА (СО2-лазер), HydraFacial и др. 
+                    li Лечение дерматологических заболеваний (акне, розацеа, себорейный дерматит и пр.), желательно знание дерматоскопии новообразований и трихоскопии кожи головы. 
+                    li Консультация и помощь в подборе профессиональной косметики для домашнего ухода (UltraCeuticals, Zein Obagi, Skin Ceuticals и др.). 
+                  p
+                    b Требования: 
+                  ul
+                    li Высшее медицинское образование; 
+                    li Интернатура/ординатура по дерматовенерологии;
+                    li Профессиональная переподготовка по косметологии (576 ак.ч.), действующий сертификат. 
+                    li Опыт работы от 3х лет обязателен; 
+                    li Наличие действующих документов о повышении квалификации; 
+                    li Желание профессионально расти; 
+                    li Личные качества: обучаемость, стремление к профессиональному росту, ответственность, умение работать в команде, понимание психологии клиента, располагающая манера общения, инициативность. 
+                  p
+                    b Условия: 
+                  ul
+                    li Работа в ведущей клинике эстетической медицины. 
+                    li Возможность работать в команде с профессорами, докторами и кандидатами медицинских наук; 
+                    li Возможность работать в команде с лучшими косметологами, дерматологами, стоматологами, гинекологами, пластическими хирургами, эндокринологами, нутрициологами, врачами Anti-age медицины; 
+                    li Возможность учиться и работать на аппаратах HydraFacial, M22, LightSheer Duet, Candela, Pro2Son, Intraceuticals, Acupulse, Deka, Zeltiq (CoolSculpting), Miradry, Ulthera, LPG, Эндосфера, VIP-line, SkinMaster, Body Jet, прессотерапия и др., 
+                    li Клиника дает развитие личного бренда доктора через Instagram, YouTube и создание индивидуальной страницы врача с демонстрацией портфолио работ на сайте www.cidk.ru; 
+                    li Территориально место работы: метро Молодежная (от метро идет корпоративное такси до клиники и обратно 30 минут посёлок Барвиха), метро Пушкинская, метро Выстовочная/Деловой центр (Москва-Сити, башня Империя и Федерация), метро Чистые пруды. По всем адресам – от метро до клиник 2-7 минут; 
+
+                  p Возможность карьерного роста до наставника, тренера, спикера внутри и вне клиник; 
+                  p Возможность публикаций в СМИ (до 5-6 раз в год); 
+                  ul
+                    li Сменный график работы, обсуждается на собеседовании; 
+                    li Достойный уровень оплаты труда (обсуждается на собеседовании); 
+                    li Возможность постоянно повышать квалификацию, обучение и тренинги за счет компании; 
+                    li Современное профессиональное оборудование; 
+                    li Бесплатный паркинг; 
+                    li Дружный, молодой коллектив; 
+                    li Совместительство не допускается (с момента заключения трудового договора); 
+                    li Испытательный срок - 3 месяца; 
+                    li Льготное обслуживание в клинике (косметология, стоматология, пластическая хирургия), возможность приобретать косметику по себестоимости; Возможность посещения международных стажировок при работе в ЦИДК от 1 года. 
+                  
+                  p
+                    b Ключевые навыки:
+                  ul
+                    li Аппаратная косметология
+                    li Эстетическая косметология 
+                    li Контурная пластика 
+                    li Клиентоориентированность
+                  
+                  p Резюме присылайте на почту visavi@mail.ru            
+              .collapse__head.j-collapse Косметолог
+                i.icon-arrow-down
+              .collapse__content
+                .collapse__content-wrapper
+                  p Требуемый опыт работы: 3–6 лет 
+              .collapse__head.j-collapse Мужчинам
+                i.icon-arrow-down
+              .collapse__content
+                .collapse__content-wrapper
+                  p Требуемый опыт работы: 3–6 лет 
+              .collapse__head.j-collapse Флеболог
+                i.icon-arrow-down
+              .collapse__content
+                .collapse__content-wrapper
+                  p Требуемый опыт работы: 3–6 лет 
+              .collapse__head.j-collapse Трихолог
+                i.icon-arrow-down
+              .collapse__content
+                .collapse__content-wrapper
+                  p Требуемый опыт работы: 3–6 лет 
+              .collapse__head.j-collapse Гинеколог
+                i.icon-arrow-down
+              .collapse__content
+                .collapse__content-wrapper
+                  p Требуемый опыт работы: 3–6 лет 
+              .collapse__head.j-collapse Стоматолог
+                i.icon-arrow-down
+              .collapse__content
+                .collapse__content-wrapper
+                  p Требуемый опыт работы: 3–6 лет 
+              .collapse__head.j-collapse Диагност
+                i.icon-arrow-down
+              .collapse__content
+                .collapse__content-wrapper
+                  p Требуемый опыт работы: 3–6 лет 
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

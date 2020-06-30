@@ -68,11 +68,12 @@ $(document).on('ready', function(){
   $(".before-after").twentytwenty();
 
   collapseNavigation();
+  collapseTable();
   headerScroll();
   mobileNav();
   inputMask();
   teamCarousel();
-  collapseTable();
+  collapseRow();
 
   // Chrome Smooth Scroll
   try {
@@ -120,6 +121,21 @@ function collapseNavigation() {
       e.preventDefault();
       _this.next(ul).slideToggle();
       _this.parent(li).toggleClass('active')
+    })
+  })
+}
+
+function collapseRow() {
+  var block = $('.collapse__content'),
+      btn = $('.j-collapse')
+  ;
+
+  btn.each(function(){
+    var _this = $(this);
+    _this.on('click', function(e){
+      e.preventDefault();
+      _this.next('.collapse__content').slideToggle();
+      _this.toggleClass('is-active')
     })
   })
 }
