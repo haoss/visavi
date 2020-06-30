@@ -2487,4 +2487,9 @@
       }
     }
   }
+  @include media-breakpoint-up(lg) {
+    &__head {
+      padding-left: 30px;
+    }
+  }
 }
