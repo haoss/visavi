@@ -1,0 +1,69 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Фотогалерея' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Фотогалерея' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-7.png", alt="").img-fluid
+          h1 Фотогалерея
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item
+                  a(href='#!') О нас
+                li.breadcrumb-item.active(aria-current='page')
+                  span Фотогалерея
+
+            nav.subcategories-nav
+              ul
+                li: a(href="#!") 3Д визуализация
+                li: a(href="#!") Интерьер
+                li.active: a(href="#!") Наши работы
+
+            .gallery
+              .gallery__row
+                .gallery__block
+                  a(href="./tmp/gallery-img-1.png").gallery-item
+                    img(src="./tmp/gallery-img-1.png", alt="")
+                .gallery__block.--second
+                  a(href="./tmp/gallery-img-2.png").gallery-item
+                    img(src="./tmp/gallery-img-2.png", alt="")
+                .gallery__block.--third
+                  a(href="./tmp/gallery-img-3.png").gallery-item
+                    img(src="./tmp/gallery-img-3.png", alt="")
+                .gallery__block.--fourth
+                  a(href="./tmp/gallery-img-4.png").gallery-item
+                    img(src="./tmp/gallery-img-4.png", alt="")
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
