@@ -2493,3 +2493,229 @@
     }
   }
 }
+
+.prices {
+  $this: &;
+  &__block {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px 0 15px 30px;
+    &-thumb {
+      position: relative;
+      z-index: 5;
+      img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+    }
+    &-title {
+      position: absolute;
+      bottom: 34px;
+      left: 20px;
+      z-index: 5;
+      height: 44px;
+      line-height: 44px;
+      padding: 0 20px;
+      font-size: rem(18px);
+      background: #F9F2ED;
+      white-space: nowrap;
+      font-weight: 400;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      background: $add-color;
+      left: 0;
+      top: 0;
+      right: 35px;
+      bottom: 0;
+    }
+    &.--second {
+      padding: 0px 23px 30px 0px;
+      &::before {
+        right: 0;
+        top: 11px;
+        left: 13px;
+      }
+    }
+    &.--third {
+      padding: 0px 23px 30px 0px;
+      &::before {
+        right: 0;
+        top: 11px;
+        left: 13px;
+      }
+    }
+    &.--fourth {
+      padding: 30px 40px 25px 0px;
+      &::before {
+        right: 0;
+        left: 15px;
+      }
+    }
+    &.--fifth {
+      padding: 30px 0px 25px 40px;
+    }
+    &.--sixth {
+      padding: 0px 23px 30px 0px;
+      &::before {
+        right: 0;
+        top: 11px;
+        left: 13px;
+      }
+    }
+    &.--seventh {
+      padding: 0px 23px 30px 0px;
+      &::before {
+        right: 0;
+        top: 11px;
+        left: 13px;
+      }
+    }
+    &.--eighth {
+      padding: 30px 40px 25px 0px;
+      &::before {
+        right: 0;
+        left: 15px;
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__block {
+      padding: 30px 0 25px 80px;
+      &-title {
+        font-size: rem(24px);
+        height: 54px;
+        line-height: 54px;
+        min-width: 275px;
+      }
+      &.--second {
+        padding: 0px 53px 50px 0px;
+        &::before {
+          right: 0;
+          top: 31px;
+          left: 33px;
+        }
+        #{$this} {
+          &__block {
+            &-title {
+              right: 20px;
+              left: auto;
+              bottom: 34px;
+            }
+          }
+        }
+      }
+      &.--third {
+        padding: 0px 53px 50px 0px;
+        &::before {
+          right: 0;
+          top: 31px;
+          left: 33px;
+        }
+        #{$this} {
+          &__block {
+            &-title {
+              left: 33px;
+            }
+          }
+        }
+      }
+      &.--fourth {
+        padding: 30px 80px 25px 0px;
+        &::before {
+          right: 0;
+          left: 35px;
+        }
+        #{$this} {
+          &__block {
+            &-title {
+              right: 37px;
+              left: 21px;
+              bottom: 20px;
+            }
+          }
+        }
+      }
+      &.--fifth {
+        padding: 30px 0px 25px 80px;
+        #{$this} {
+          &__block {
+            &-title {
+              left: 21px;
+              bottom: 34px;
+            }
+          }
+        }
+      }
+      &.--sixth {
+        padding: 0px 53px 50px 0px;
+        &::before {
+          right: 0;
+          top: 31px;
+          left: 33px;
+        }
+        #{$this} {
+          &__block {
+            &-title {
+              right: 19px;
+              left: auto;
+              bottom: 29px;
+            }
+          }
+        }
+      }
+      &.--seventh {
+        padding: 0px 53px 50px 0px;
+        &::before {
+          right: 0;
+          top: 31px;
+          left: 33px;
+        }
+        #{$this} {
+          &__block {
+            &-title {
+              left: 33px;
+              bottom: 34px;
+            }
+          }
+        }
+      }
+      &.--eighth {
+        padding: 30px 80px 25px 0px;
+        &::before {
+          right: 0;
+          left: 35px;
+        }
+        #{$this} {
+          &__block {
+            &-title {
+              right: 37px;
+              left: auto;
+              bottom: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__row {
+      display: flex;
+      margin: 0 -10px;
+      flex-wrap: wrap;
+    }
+    &__block {
+      width: calc(50% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 24px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__block {
+      margin-bottom: 32px;
+    }
+  }
+}

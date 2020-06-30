@@ -1,0 +1,89 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Цены' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Цены' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-11.png", alt="").img-fluid
+          h1 Цены
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item.active(aria-current='page')
+                  span Цены
+
+            .prices
+              .prices__row
+                .prices__block 
+                  .prices__block-thumb
+                    a(href="#!")
+                      img(src="./tmp/prices-img-1.png", alt="")
+                  .prices__block-title Дерматолог
+                .prices__block.--second
+                  .prices__block-thumb
+                    a(href="#!")
+                      img(src="./tmp/prices-img-2.png", alt="")
+                  .prices__block-title Косметолог
+                .prices__block.--third
+                  .prices__block-thumb
+                    a(href="#!")
+                      img(src="./tmp/prices-img-3.png", alt="")
+                  .prices__block-title Мужчинам
+                .prices__block.--fourth
+                  .prices__block-thumb
+                    a(href="#!")
+                      img(src="./tmp/prices-img-4.png", alt="")
+                  .prices__block-title Флеболог
+                .prices__block.--fifth
+                  .prices__block-thumb
+                    a(href="#!")
+                      img(src="./tmp/prices-img-5.png", alt="")
+                  .prices__block-title Трихолог
+                .prices__block.--sixth
+                  .prices__block-thumb
+                    a(href="#!")
+                      img(src="./tmp/prices-img-6.png", alt="")
+                  .prices__block-title Гинеколог
+                .prices__block.--seventh
+                  .prices__block-thumb
+                    a(href="#!")
+                      img(src="./tmp/prices-img-7.png", alt="")
+                  .prices__block-title Стоматолог
+                .prices__block.--eighth
+                  .prices__block-thumb
+                    a(href="#!")
+                      img(src="./tmp/prices-img-8.png", alt="")
+                  .prices__block-title Диагност
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
