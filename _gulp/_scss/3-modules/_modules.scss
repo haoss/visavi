@@ -3487,3 +3487,131 @@
     }
   }
 }
+
+.view {
+  background: $add-color;
+  margin-bottom: 30px;
+  @include media-breakpoint-up(sm) {}
+  @include media-breakpoint-up(md) {
+    margin-bottom: 60px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 142px;
+  }
+}
+
+.popular {
+  .h2, h2 {
+    text-align: left;
+    position: relative;
+    font-size: rem(36px);
+    margin-bottom: 40px;
+    &::before {
+      width: 228px;
+      height: 6px;
+      background-color: #f1e1d5;
+      position: absolute;
+      left: -5px;
+      top: 28px;
+      content: '';
+      z-index: -1;
+    }
+  }
+  &__btn {
+    height: 40px;
+    line-height: 40px;
+    width: 220px;
+    background: #ECCFB9;
+    font-size: rem(18px);
+    margin: 0 auto;
+    display: block;
+  }
+  &__block {
+    background: $add-color;
+    padding: 22px 10px 27px 10px;
+    font-size: rem(18px);
+    overflow: hidden;
+    position: relative;
+    p {
+      margin-bottom: 10px;
+    }
+    &-more {
+      display: block;
+      width: 100%;
+      background: $color-white;
+      box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.1);
+      height: 40px;
+      line-height: 40px;
+      color: $color-black;
+      font-size: rem(18px);
+      text-decoration: none;
+      text-align: center;
+    }
+    h3, .h3 {
+      font-size: rem(24px);
+      margin-bottom: 10px;
+    }
+    &-thumb {
+      margin-bottom: 18px;
+      height: 193px;
+      position: relative;
+      @include clearfix;
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+  &__carousel {
+    margin-bottom: 50px;
+    padding: 0 10px;
+  }
+  @include media-breakpoint-up(sm) {
+    .h2, h2 {
+      margin-bottom: 20px;
+      &::before {
+        width: 100%;
+        max-width: 471px;
+      }
+    }
+    &__block {
+      padding-left: 24px;
+      padding-right: 26px;
+    }
+    &__carousel {
+      padding: 0 60px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__carousel {
+      padding: 0;
+      margin-bottom: 40px;
+      .slick-slide {
+        width: 350px;
+        margin-right: 40px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    .h2, h2 {
+      font-size: rem(64px);
+      text-align: center;
+      margin-bottom: 40px;
+      &::before {
+        max-width: 952px;
+        height: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 48px;
+      }
+    }
+    &__carousel {
+      padding: 0;
+      margin-bottom: 35px;
+    }
+  }
+}
