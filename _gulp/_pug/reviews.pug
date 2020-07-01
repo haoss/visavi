@@ -1,0 +1,136 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Отзывы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Отзывы' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-14.png", alt="").img-fluid
+          .h1 Отзывы
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item.active(aria-current='page')
+                  span Отзывы
+
+            // Pagination
+            +pagination('right d-none d-md-block')
+              +pagination-item('1', '#!', true)
+              +pagination-item('2', '#!')
+              +pagination-item('3', '')
+
+            .reviews__row
+              .reviews__block
+                .reviews__user
+                  .reviews__user-img
+                    img(src="./tmp/about-review-img.png", alt="")
+                  .reviews__user-content
+                    p Много лет хожу к Ларисочке. Так как она делает чистку, не делает никто. Так же помогла мне подобрать уходовую косметику и кстати среди них не только проф. средства, но и масс маркет, который прекрасно справляется со своей задачей. 
+                      br
+                      b.fs22  Оксана
+                .reviews__answer
+                  p Галина, спасибо большое за обратную связь! Обязательно передадим Ларисе
+                    br
+                    b.fs20 С уважением, Администрация
+              .reviews__block
+                .reviews__user
+                  .reviews__user-img
+                    img(src="./tmp/about-review-img.png", alt="")
+                  .reviews__user-content
+                    p Много лет хожу к Ларисочке. Так как она делает чистку, не делает никто. Так же помогла мне подобрать уходовую косметику и кстати среди них не только проф. средства, но и масс маркет, который прекрасно справляется со своей задачей. 
+                      br
+                      b.fs22  Оксана
+                .reviews__answer
+                  p Галина, спасибо большое за обратную связь! Обязательно передадим Ларисе
+                    br
+                    b.fs20 С уважением, Администрация
+
+            // Pagination
+            +pagination('center')
+              +pagination-item('1', '#!', true)
+              +pagination-item('2', '#!')
+              +pagination-item('3', '')
+
+            .reviews__form
+              h2 Ваш отзыв важен для нас
+              form(action="#!")
+                .row
+                  .col-12.col-md-6
+                    .form-group
+                      +field-text({
+                        title: '',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'review-name',
+                          placeholder: 'Ваше имя',
+                        }
+                      })
+                  .col-12.col-md-6
+                    .form-group
+                      +field-text({
+                        title: '',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'review-email',
+                          placeholder: 'Ваше E-mail',
+                        }
+                      })
+                .form-group
+                  +field-text({
+                    title: '',
+                    hasJs: false,
+                    isTextarea: true,
+                    hasError: false,
+                    helpText: '',
+                    mods: '',
+                    val: '',
+                    attrs: {
+                      name: 'review-comment',
+                      placeholder: 'Ваш отзыв',
+                      rows: '1'
+                    }
+                  })
+                .clear15
+                button(type="button").btn.btn--block Оставить отзыв
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
