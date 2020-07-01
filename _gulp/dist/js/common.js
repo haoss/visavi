@@ -67,6 +67,22 @@ $(document).on('ready', function(){
 
   $(".before-after").twentytwenty();
 
+  $('.about-us__carousel').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+
   collapseNavigation();
   collapseTable();
   headerScroll();

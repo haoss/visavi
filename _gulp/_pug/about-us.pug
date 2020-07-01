@@ -1,0 +1,96 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'О нас' //активный пункт меню, список в header.jade
+  -var pageTitle = 'О нас' + ' - Визави. Центр эстетики и красоты' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    // Banner row
+    .banner-row
+      .container
+        .banner-row__block
+          img(src="./tmp/banner-top-13.png", alt="").img-fluid
+          .h1 О нас
+
+    // Content
+    .content
+      .container
+
+        .row
+          .d-none.d-xl-block.col-xl-3
+            include ./_include/_catalog-nav
+
+          .col-12.col-xl-9
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb
+                li.breadcrumb-item
+                  a(href='#!') Главная
+                li.breadcrumb-item.active(aria-current='page')
+                  span О нас
+
+            .content__document.--about-us
+              h1 О нас
+              p Самый лучший способ поднять настроение и приобрести уверенность — это доверить себя рукам специалистов профессионального салона красоты «Визави». Стаж каждого сотрудника более 10 лет, поэтому мы без труда найдем ключик к вашему сердцу. 
+              p В нашем салоне красоты мы делаем все для вашего комфорта — большая парковка около входа, уютная и теплая атмосфера, ароматный кофе каждому клиенту... Это и многое другое ждет вас в нашем центре красоты. Приходите и это навсегда изменит ваше представление о красоте, расслаблении и комфорте! 
+              p Мы предоставляем полный спектр услуг: от маникюра до лазерной шлифовки и всех видов массажа. Эстетическая, врачебная и аппаратная косметология дают возможность подчеркнуть достоинства и спрятать недостатки без хирургического вмешательства. Сейчас сфера косметологии так динамично развивается, что новое оборудование появляется каждый год. Мы пристально следим за новинками и используем только передовые технологии, чтобы процедуры в нашем салоне проходили максимально эффективно и безболезненно. 
+
+            .about-us__gallery
+              .about-us__carousel
+                div
+                  .about-us__carousel-block
+                    img(src="./tmp/about-gallery-img-1.png", alt="").img-fluid
+                div
+                  .about-us__carousel-block
+                    img(src="./tmp/about-gallery-img-2.png", alt="").img-fluid
+                div
+                  .about-us__carousel-block
+                    img(src="./tmp/about-gallery-img-1.png", alt="").img-fluid
+                div
+                  .about-us__carousel-block
+                    img(src="./tmp/about-gallery-img-2.png", alt="").img-fluid
+                div
+                  .about-us__carousel-block
+                    img(src="./tmp/about-gallery-img-1.png", alt="").img-fluid
+                div
+                  .about-us__carousel-block
+                    img(src="./tmp/about-gallery-img-2.png", alt="").img-fluid
+            
+            .about-us__info
+              h2 Знаете, какую процедуру обожает Мадонна?
+              .about-us__review
+                .about-us__review-img
+                  img(src="./tmp/about-review-img.png", alt="")
+                .about-us__review-block
+                  p Я люблю Intraceuticals! А также его любит моё лицо. С любовью, Мадонна
+              p Аппаратная методика и домашний уход INTRACEUTICALS – выбор звёзд, дерматологов, пластических хирургов в клиниках и салонах красоты класса «люкс» в 30 странах мира.  Омоложение кожи без инъекций теперь возможно благодаря аппарату, который под давлением генерирует концентрированный кислород. Почувствуйте себя голливудской звездой с упругой молодой кожей в руках наших специалистов!
+              .about-us__info-inside
+                h2 Визави  с тобой, чтобы делать твою жизнь проще, тебя — красивой, а подружек и незнакомцев — долго смотрящими вслед.
+              p Новая прическа, макияж и ногти — казалось бы, легкие изменения, однако из салона вы выйдете совершенно другим человеком. Умело подобранная прическа подчеркнет индивидуальность и поможет скрыть некоторые недостатки внешности — торчащие ушки, слишком низкий или высокий лоб. Удачная стрижка может даже исправить форму лица, а неудачная лишь подчеркнет те черты, которые хочется спрятать. Наши стилисты подберут вам стрижку, которая раскроет вашу привлекательность и обратит на вас внимание всех мужчин.
+              p Мы не только делаем женщин красивее, а мужчин привлекательнее, но и активно рассказываем о секретах красоты и результатах наших клиентах в Инстаграм и на YouTube-канал!
+            
+            .about-us__social
+              div
+                i.icon-arrow-right
+              div
+                a(href="#!")
+                  img(src="./images/icon-social-3.svg", alt="")
+                a(href="#!")
+                  img(src="./images/icon-social-5.svg", alt="")
+
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
