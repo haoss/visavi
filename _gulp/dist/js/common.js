@@ -121,6 +121,14 @@ $(document).on('ready', function(){
     ]
   });
 
+  $('.services__carousel').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    variableWidth: true
+  });
+
   collapseNavigation();
   collapseTable();
   headerScroll();
