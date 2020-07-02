@@ -34,14 +34,54 @@ html(lang="ru")
 
       // View
       .view
-        .container
-          h2 Загляните в наши соцсети
+        .view__top
+          .container
+            h2
+              small Не верите словам, 
+              | Загляните в наши соцсети
+            .view__social
+              a(href="#!")
+                img(src="./images/icon-social-1.svg", alt="")
+              a(href="#!")
+                img(src="./images/icon-social-2.svg", alt="")
+              a(href="#!")
+                img(src="./images/icon-social-3.svg", alt="")
+              a(href="#!")
+                img(src="./images/icon-social-4.svg", alt="")
+        .view__bottom
+          .container-fluid
+            .view__carousel
+              div
+                .view__block
+                  a(href="#!")
+                    img(src="./tmp/view-img-1.png", alt="")
+              div
+                .view__block
+                  a(href="#!")
+                    img(src="./tmp/view-img-2.png", alt="")
+              div
+                .view__block
+                  a(href="#!")
+                    img(src="./tmp/view-img-3.png", alt="")
+              div
+                .view__block
+                  a(href="#!")
+                    img(src="./tmp/view-img-4.png", alt="")
+              div
+                .view__block
+                  a(href="#!")
+                    img(src="./tmp/view-img-1.png", alt="")
+              div
+                .view__block
+                  a(href="#!")
+                    img(src="./tmp/view-img-2.png", alt="")
 
       // Popular
       .popular
         .container
           h2 Популярные процедуры
 
+        .container-fluid
           .popular__carousel
             div
               .popular__block

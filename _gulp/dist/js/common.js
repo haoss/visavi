@@ -90,7 +90,30 @@ $(document).on('ready', function(){
     infinite: true,
     responsive: [
       {
-        breakpoint: 760,
+        breakpoint: 759,
+        settings: {
+          variableWidth: true
+        }
+      },
+      {
+        breakpoint: 1319,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+
+  $('.view__carousel').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 479,
         settings: {
           variableWidth: true
         }

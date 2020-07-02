@@ -40,6 +40,7 @@ button {
   box-shadow: 2px 4px 4px rgba($color-black,.1);
   margin-left: 25px;
   position: relative;
+  transition: all 0.35s;
   &::before {
     font-size: rem(30px);
     font-family: $font-icomoon;
