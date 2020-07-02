@@ -21,8 +21,6 @@ html(lang="ru")
       .advantages
         .container
           h2 Наши преимущества
-
-
           .advantages__row
             .advantages__img
               img(src="./tmp/advantages-img.png", alt="")
@@ -104,7 +102,34 @@ html(lang="ru")
       // About
       .about
         .container
-          h2 О нас
+          .d-xl-none
+            h2 О нас
+
+          .about__wrapper
+            .about__carousel
+              div
+                .about__block
+                  a(href="#!")
+                    img(src="./tmp/about-index-img-1.png", alt="")
+              div
+                .about__block
+                  a(href="#!")
+                    img(src="./tmp/about-index-img-1.png", alt="")
+              div
+                .about__block
+                  a(href="#!")
+                    img(src="./tmp/about-index-img-1.png", alt="")
+            .about__content
+              .d-none.d-xl-block
+                .h2 О нас
+              p В нашей студии всегда весна и хорошее настроение. Мы любим свою работу и максимально качественно оказываем услуги. Готовы эксперементировать вместе с вами и создавать сногшибательные бразы!
+              p Приходите сами, приводите друзей и родных, заказывайте подарочные сертификаты своим близким и любимым.
+              p Мы позаботимся о вашей красоте!!!
+              .clear
+              .about__btn
+                button(type="button").about__btn-prev
+                button(type="button").about__btn-next
+
 
       // View
       .view

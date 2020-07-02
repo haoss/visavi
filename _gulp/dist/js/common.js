@@ -129,6 +129,15 @@ $(document).on('ready', function(){
     variableWidth: true
   });
 
+  $('.about__carousel').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    prevArrow: '.about__btn-prev',
+    nextArrow: '.about__btn-next'
+  });
+
   collapseNavigation();
   collapseTable();
   headerScroll();
