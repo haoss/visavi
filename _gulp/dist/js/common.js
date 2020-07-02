@@ -83,6 +83,21 @@ $(document).on('ready', function(){
     ]
   });
 
+  $('.popular__carousel').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 760,
+        settings: {
+          variableWidth: true
+        }
+      }
+    ]
+  });
+
   collapseNavigation();
   collapseTable();
   headerScroll();
