@@ -15,7 +15,36 @@ html(lang="ru")
     include ./_include/_header
 
     // Content
-    .content
+    .content.no--p-top
+
+      // Main slider
+      .main-slider
+        .main-slider__bg.--bg1
+        .main-slider__bg.--bg2
+        .main-slider__bg.--bg3
+        .container.main-slider__container
+          .main-slider__carousel
+            div
+              .main-slider__block
+                .main-slider__block-img
+                  img(src="./tmp/main-slider-img-1.png", alt="")
+                .main-slider__block-content
+                  .h1 Получи СКИДКУ на BEAUTY DAY с подругой в нашем салоне
+                  a(href="#!").btn.main-slider__btn Получить
+            div
+              .main-slider__block
+                .main-slider__block-img
+                  img(src="./tmp/main-slider-img-1.png", alt="")
+                .main-slider__block-content
+                  .h1 Получи СКИДКУ на BEAUTY DAY с подругой в нашем салоне
+                  a(href="#!").btn.main-slider__btn Получить
+            div
+              .main-slider__block
+                .main-slider__block-img
+                  img(src="./tmp/main-slider-img-1.png", alt="")
+                .main-slider__block-content
+                  .h1 Получи СКИДКУ на BEAUTY DAY с подругой в нашем салоне
+                  a(href="#!").btn.main-slider__btn Получить
       
       // Advantages
       .advantages
@@ -129,7 +158,6 @@ html(lang="ru")
               .about__btn
                 button(type="button").about__btn-prev
                 button(type="button").about__btn-next
-
 
       // View
       .view

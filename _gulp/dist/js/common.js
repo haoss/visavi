@@ -138,6 +138,15 @@ $(document).on('ready', function(){
     nextArrow: '.about__btn-next'
   });
 
+  $('.main-slider__carousel').slick({
+    mobileFirst: true,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    fade: true,
+    cssEase: 'linear'
+  });
+
   collapseNavigation();
   collapseTable();
   headerScroll();
