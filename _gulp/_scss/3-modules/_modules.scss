@@ -4348,6 +4348,8 @@
 }
 
 .services {
+  position: relative;
+  z-index: 5;
   h2, .h2 {
     font-size: rem(36px);
     position: relative;
