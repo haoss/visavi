@@ -156,7 +156,7 @@
     }
     &__wrapper {
       padding: 0;
-      height: 73px;
+      height: 53px;
       overflow: visible;
       &>.container {
         max-width: 1298px;
@@ -170,9 +170,9 @@
             display: inline-block;
             position: relative;
             &>a, &>span {
-              font-size: rem(18px);
-              height: 73px;
-              line-height: 73px;
+              font-size: rem(16px);
+              height: 53px;
+              line-height: 53px;
               .icon-arrow-down {
                 display: none;
               }
@@ -231,6 +231,22 @@
           }
           &>li {
             flex-grow: 1;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__wrapper {
+      height: 73px;
+      nav {
+        ul {
+          li {
+            &>a, &>span {
+              font-size: rem(18px);
+              height: 73px;
+              line-height: 73px;
+            }
           }
         }
       }

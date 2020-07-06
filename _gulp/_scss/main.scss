@@ -9,14 +9,16 @@ $grid-breakpoints: (
   sm: 480px,
   md: 760px,
   lg: 992px,
-  xl: 1320px
+  xl: 1320px,
+  xxl: 1550px
 );
 
 $container-max-widths: (
   sm: 480px,
   md: 740px,
   lg: 940px,
-  xl: 1298px
+  xl: 1298px,
+  xxl: 1500px
 );
 
 @import "node_modules/bootstrap/scss/functions";
