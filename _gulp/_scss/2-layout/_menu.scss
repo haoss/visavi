@@ -156,13 +156,14 @@
     }
     &__wrapper {
       padding: 0;
-      height: 53px;
+      height: 60px;
       overflow: visible;
       &>.container {
-        max-width: 1298px;
+        max-width: 1160px;
       }
       nav {
         font-size: rem(0px);
+        margin-bottom: 0;
         ul {
           display: flex;
           justify-content: space-between;
@@ -171,8 +172,8 @@
             position: relative;
             &>a, &>span {
               font-size: rem(16px);
-              height: 53px;
-              line-height: 53px;
+              height: 60px;
+              line-height: 60px;
               .icon-arrow-down {
                 display: none;
               }

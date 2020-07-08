@@ -96,7 +96,7 @@ $(document).on('ready', function(){
         }
       },
       {
-        breakpoint: 1319,
+        breakpoint: 1200,
         settings: {
           variableWidth: false,
           slidesToShow: 3,

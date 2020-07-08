@@ -25,11 +25,11 @@ body {
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  @include media-breakpoint-up(md) {
-    font-size: rem(20px);
-  }
   @include media-breakpoint-up(xl) {
     background-position: center 215px;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: rem(20px);
   }
   &.is-fixed {
     overflow: hidden;
@@ -59,6 +59,9 @@ body {
   @include media-breakpoint-up(md) {
     font-size: rem(36px);
   }
+  @include media-breakpoint-up(xl) {
+    font-size: rem(45px);
+  }
 }
 .h2, h2 {
   font-size: rem(30px);
@@ -67,6 +70,9 @@ body {
   @include media-breakpoint-up(md) {
     font-size: rem(36px);
   }
+  // @include media-breakpoint-up(xl) {
+  //   font-size: rem(45px);
+  // }
 }
 .h3, h3 {
   font-size: rem(16px);
