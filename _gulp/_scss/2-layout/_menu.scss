@@ -120,6 +120,23 @@
     a {
       display: inline-block;
       margin: 0 6px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid $add-color;
+      background-color: $add-color;
+      text-decoration: none;
+      text-align: center;
+      color: #C69066;
+      position: relative;
+      transition: all 0.35s;
+      i {
+        font-size: rem(18px);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
     }
   }
   &__phones {
@@ -143,6 +160,17 @@
       &>div {
         &+div {
           margin-left: 20px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__social {
+      a {
+        &:hover {
+          background-color: #EDCFB8;
+          border-color: #EDCFB8;
+          color: $color-white;
         }
       }
     }

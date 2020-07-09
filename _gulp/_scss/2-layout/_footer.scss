@@ -29,7 +29,24 @@
     }
     a {
       display: inline-block;
-      margin: 0 5px;
+      margin: 0 6px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid $color-white;
+      background-color: $add-color;
+      text-decoration: none;
+      text-align: center;
+      color: $color-white;
+      position: relative;
+      transition: all 0.35s;
+      i {
+        font-size: rem(21px);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
     }
   }
   &__phones {
@@ -128,6 +145,17 @@
       margin-bottom: 15px;
       a {
         margin: 0 20px;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__social {
+      a {
+        &:hover {
+          background-color: $color-white;
+          border-color: $color-white;
+          color: $add-color;
+        }
       }
     }
   }
