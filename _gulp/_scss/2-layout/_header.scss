@@ -32,6 +32,7 @@
     align-items: center;
     max-width: 320px;
     margin: 0 auto 18px;
+    flex-grow: 1;
   }
   &__logo {
     flex-shrink: 0;
