@@ -3952,15 +3952,25 @@
     margin-bottom: 23px;
     a {
       display: inline-block;
-      vertical-align: middle;
+      margin: 0 6px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid #F9F2ED;
+      background-color: #F9F2ED;
+      text-decoration: none;
+      text-align: center;
+      color: #C69066;
       position: relative;
-      z-index: 5;
-      &+a {
-        margin-left: 12px;
-      }
-      img {
-        width: 45px;
-        height: 45px;
+      transition: all 0.35s;
+      position: relative;
+      z-index: 10;
+      i {
+        font-size: rem(18px);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
       }
     }
   }
@@ -4142,6 +4152,15 @@
       &::before {
         top: 108px;
         right: 103px;
+      }
+    }
+    &__social {
+      a {
+        &:hover {
+          background-color: #EDCFB8;
+          border-color: #EDCFB8;
+          color: $color-white;
+        }
       }
     }
   }
@@ -4787,6 +4806,65 @@
       display: block;
     }
   }
+  &__images {
+    overflow: hidden;
+    position: relative;
+    width: 475px;
+    height: 493px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: -505px;
+    &-mask {
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      right: -100px;
+      bottom: -100px;
+      z-index: 10;
+      transition: all 1.5s;
+      transform: rotate(0deg);
+      background: $color-white;
+      mask-image: url('../images/advantages-mask.png');
+      mask-position: center center;
+      transform-origin: 50%;
+    }
+    &-img {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &-content {
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $add-color;
+      color: $primary-color;
+      text-align: center;
+      opacity: 0;
+      transition: all 1s;
+      &>div {
+        font-size: rem(14px);
+        position: absolute;
+        width: 260px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,calc(-50% + 35px));
+        transition: transform 1s;
+      }
+    }
+  }
   &__row {
     padding-bottom: 35px;
     position: relative;
@@ -4798,6 +4876,7 @@
     font-weight: 600;
     max-width: 300px;
     font-size: rem(16px);
+    z-index: 5;
     img {
       display: block;
       margin: 0 auto 5px;
@@ -4843,6 +4922,9 @@
       right: 0;
       content: '';
     }
+    &__images {
+      display: block;
+    }
     &__img {
       display: block;
     }
@@ -4869,6 +4951,11 @@
       position: relative;
       // background: pink;
     }
+    &__images {
+      left: 50%;
+      transform: translate(-50%,-50%);
+      margin: 0;
+    }
     &__img {
       left: 50%;
       transform: translate(-50%,-50%);
@@ -4883,39 +4970,39 @@
       p {
         max-width: inherit;
       }
-      &:nth-child(9) {
+      &:nth-child(8) {
         top: 516px;
         right: 165px;
       }
-      &:nth-child(8) {
+      &:nth-child(7) {
         top: 516px;
         left: 171px;
       }
-      &:nth-child(7) {
+      &:nth-child(6) {
         top: 333px;
         right: 25px;
         width: 214px;
       }
-      &:nth-child(6) {
+      &:nth-child(5) {
         top: 327px;
         left: 25px;
         width: 162px;
       }
-      &:nth-child(5) {
+      &:nth-child(4) {
         width: 165px;
         top: 152px;
         right: 49px;
       }
-      &:nth-child(4) {
+      &:nth-child(3) {
         width: 165px;
         top: 152px;
         left: 49px;
       }
-      &:nth-child(3) {
+      &:nth-child(2) {
         width: 165px;
         right: 169px;
       }
-      &:nth-child(2) {
+      &:first-child {
         width: 165px;
         left: 169px;
       }
@@ -4946,6 +5033,22 @@
     &__block {
       font-size: rem(20px);
       width: 246px !important;
+      &:hover {
+        // background: pink;
+        &~.advantages__images {
+          .advantages__images {
+            &-mask {
+              transform: rotate(360deg);
+            }
+            &-content {
+              opacity: 1;
+              &>div {
+                transform: translate(-50%,-50%);
+              }
+            }
+          }
+        }
+      }
       img {
         margin: 0;
         position: absolute;
@@ -4955,7 +5058,7 @@
         z-index: 5;
         width: auto;
       }
-      &:nth-child(2) {
+      &:first-child {
         top: 130px;
         left: 117px;
         text-align: right;
@@ -4964,7 +5067,7 @@
           top: -36px;
         }
       }
-      &:nth-child(3) {
+      &:nth-child(2) {
         text-align: left;
         top: 353px;
         right: 65px;
@@ -4975,7 +5078,7 @@
           height: 71px;
         }
       }
-      &:nth-child(4) {
+      &:nth-child(3) {
         top: 130px;
         right: 105px;
         left: auto;
@@ -4984,7 +5087,7 @@
           left: -33px;
         }
       }
-      &:nth-child(5) {
+      &:nth-child(4) {
         top: 232px;
         right: 65px;
         text-align: left;
@@ -4995,7 +5098,7 @@
           height: 70px;
         }
       }
-      &:nth-child(6) {
+      &:nth-child(5) {
         top: 453px;
         right: 105px;
         left: auto;
@@ -5006,7 +5109,7 @@
           
         }
       }
-      &:nth-child(7) {
+      &:nth-child(6) {
         text-align: right;
         width: 284px !important;
         top: 232px;
@@ -5019,7 +5122,7 @@
           height: 70px;
         }
       }
-      &:nth-child(8) {
+      &:nth-child(7) {
         top: 353px;
         left: 46px;
         text-align: right;
@@ -5030,7 +5133,7 @@
           height: 82px;
         }
       }
-      &:nth-child(9) {
+      &:nth-child(8) {
         text-align: right;
         left: 117px;
         top: 477px;
@@ -5463,9 +5566,11 @@
       bottom: 110px;
     }
     &__container {
-      max-width: 1160px;
+      max-width: inherit;
     }
     &__block {
+      max-width: 1160px;
+      margin: 0 auto;
       &-content {
         top: 0;
         h1, .h1 {

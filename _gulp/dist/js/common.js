@@ -113,8 +113,8 @@ $(document).on('ready', function(){
     mobileFirst: true,
     dots: false,
     arrows: true,
-    infinite: false,
-    autoplay: false,
+    infinite: true,
+    autoplay: true,
     autoplaySpeed: 4000,
     responsive: [
       {
@@ -164,6 +164,7 @@ $(document).on('ready', function(){
   inputMask();
   teamCarousel();
   collapseRow();
+  advantagesAnimate();
 
   // Chrome Smooth Scroll
   try {
@@ -289,5 +290,19 @@ function collapseTable() {
   btn.on('click', function(e) {
     var _this = $(this);
     $(this).parents('tr').next('.j-table-content').toggle();
-  })
+  });
+}
+
+function advantagesAnimate() {
+  var tl;
+  var block = $('.advantages__block');
+
+  block.each(function(){
+    var _this = $(this);
+
+    _this.hover(function(){
+      var text = _this.data('text');
+      $('.advantages__images-content > div').text(text);
+    });
+  });
 }

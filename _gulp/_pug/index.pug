@@ -51,32 +51,36 @@ html(lang="ru")
         .container.advantages__container
           h2 Наши преимущества
           .advantages__row
-            .advantages__img
-              img(src="./tmp/advantages-img.png", alt="")
-            .advantages__block
+            .advantages__block(data-text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.")
               img(src="./tmp/advantages-img-1.svg", alt="")
               p Более 10 лет опыта в мире стиля и красоты
-            .advantages__block
+            .advantages__block(data-text="text 2")
               img(src="./tmp/advantages-img-2.svg", alt="")
               p Мастера, которые влюблены в свое дело
-            .advantages__block
+            .advantages__block(data-text="text 3")
               img(src="./tmp/advantages-img-3.svg", alt="")
               p Высокая квалификация врачей и специалистов
-            .advantages__block
+            .advantages__block(data-text="text 4")
               img(src="./tmp/advantages-img-4.svg", alt="")
               p Мы работаем с ведущими косметическими брендами
-            .advantages__block
+            .advantages__block(data-text="text 5")
               img(src="./tmp/advantages-img-5.svg", alt="")
               p Сертифицированное оборудование последнего поколения
-            .advantages__block
+            .advantages__block(data-text="text 6")
               img(src="./tmp/advantages-img-6.svg", alt="")
               p Для нашего гостя мы делаем все, чтобы он чувствовал себя окруженным заботой
-            .advantages__block
+            .advantages__block(data-text="text 7")
               img(src="./tmp/advantages-img-7.svg", alt="")
               p Удобное расположение: 5 мин пешком от метро
-            .advantages__block
+            .advantages__block(data-text="text 8")
               img(src="./tmp/advantages-img-8.svg", alt="")
               p Бесплатная парковка
+            .advantages__images
+              //- img(src="./images/advantages-mask.png", alt="").advantages__images-mask
+              .advantages__images-mask
+              .advantages__images-img(style="background-image: url('./tmp/advantages-images.jpg')")
+              .advantages__images-content
+                div
 
       // Services
       .services
@@ -168,13 +172,13 @@ html(lang="ru")
               | Загляните в наши соцсети
             .view__social
               a(href="#!")
-                img(src="./images/icon-social-1.svg", alt="")
+                i.icon-viber
               a(href="#!")
-                img(src="./images/icon-social-2.svg", alt="")
+                i.icon-vkontakte
               a(href="#!")
-                img(src="./images/icon-social-3.svg", alt="")
+                i.icon-instagram
               a(href="#!")
-                img(src="./images/icon-social-4.svg", alt="")
+                i.icon-telegram
         .view__bottom
           .container-fluid
             .view__carousel.gallery
