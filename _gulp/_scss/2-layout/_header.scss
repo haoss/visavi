@@ -187,7 +187,7 @@
     &.is-scroll {
       .header {
         &__logo {
-          margin-left: -116px;
+          // margin-left: -116px;
         }
         &__phones {
           padding-left: 225px;
@@ -317,14 +317,6 @@
     }
     &-holder {
       height: 272px;
-    }
-    &.is-scroll {
-      padding-top: 14px;
-      .header {
-        &__wrapper {
-          margin-bottom: 20px;
-        }
-      }
     }
   }
 }

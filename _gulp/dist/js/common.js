@@ -60,6 +60,7 @@ $(document).on('ready', function(){
     draggable: false,
     infinite: true,
     swipe: false,
+    waitForAnimate: false,
     variableWidth: true,
     prevArrow: '.one-services__gallery-carousel .look__btn-left',
     nextArrow: '.one-services__gallery-carousel .look__btn-right'
@@ -72,6 +73,7 @@ $(document).on('ready', function(){
     dots: false,
     arrows: true,
     infinite: true,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 760,
@@ -88,6 +90,7 @@ $(document).on('ready', function(){
     dots: false,
     arrows: true,
     infinite: true,
+    waitForAnimate: false,
     responsive: [
       {
         breakpoint: 759,
@@ -110,12 +113,16 @@ $(document).on('ready', function(){
     mobileFirst: true,
     dots: false,
     arrows: true,
-    infinite: true,
+    infinite: false,
+    autoplay: false,
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 479,
         settings: {
-          variableWidth: true
+          variableWidth: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
         }
       }
     ]
@@ -126,6 +133,7 @@ $(document).on('ready', function(){
     dots: false,
     arrows: true,
     infinite: true,
+    waitForAnimate: false,
     variableWidth: true
   });
 
@@ -134,6 +142,7 @@ $(document).on('ready', function(){
     dots: false,
     arrows: true,
     infinite: true,
+    waitForAnimate: false,
     prevArrow: '.about__btn-prev',
     nextArrow: '.about__btn-next'
   });
@@ -143,6 +152,7 @@ $(document).on('ready', function(){
     dots: true,
     arrows: false,
     infinite: true,
+    waitForAnimate: false,
     fade: true,
     cssEase: 'linear'
   });
