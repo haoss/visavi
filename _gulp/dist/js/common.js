@@ -289,7 +289,8 @@ function collapseTable() {
 
   btn.on('click', function(e) {
     var _this = $(this);
-    $(this).parents('tr').next('.j-table-content').toggle();
+    _this.parents('tr').next('.j-table-content').toggle();
+    _this.toggleClass('is-active');
   });
 }
 
