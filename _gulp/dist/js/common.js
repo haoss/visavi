@@ -74,9 +74,11 @@ $(document).on('ready', function(){
     arrows: true,
     infinite: true,
     waitForAnimate: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 760,
+        breakpoint: 960,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
