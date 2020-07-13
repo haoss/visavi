@@ -128,6 +128,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-youtube:before {
+  content: "\e91d";
+}
 .icon-instagram:before {
   content: "\e917";
 }

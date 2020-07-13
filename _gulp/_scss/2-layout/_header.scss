@@ -47,14 +47,14 @@
   &__center {
     display: flex;
     align-items: center;
-    max-width: 320px;
+    justify-content: space-between;
     margin: 0 auto 18px;
     flex-grow: 1;
   }
   &__logo {
     flex-shrink: 0;
     img {
-      width: 104px;
+      width: 134px;
     }
   }
   &__address {
@@ -81,7 +81,7 @@
   &__phones {
     flex-shrink: 0;
     flex-grow: 1;
-    font-size: rem(16px);
+    font-size: rem(21px);
     a {
       text-decoration: none;
     }
@@ -134,6 +134,9 @@
     }
     &-holder {
       height: 289px;
+    }
+    &__phones {
+      font-size: rem(16px);
     }
     &.is-scroll {
       .header {

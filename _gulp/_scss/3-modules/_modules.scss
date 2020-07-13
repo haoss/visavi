@@ -364,6 +364,11 @@
             line-height: 40px;
             top: 0;
           }
+          &>a {
+            &:hover {
+              background: #F9F2ED;
+            }
+          }
         }
         ul {
           background: $color-white;
@@ -776,6 +781,10 @@
           &__block {
             &-thumb {
               margin-bottom: 15px;
+              img {
+                height: 290px;
+                object-fit: cover;
+              }
             }
             &-content {
               h2, .h2 {
@@ -868,6 +877,9 @@
                 right: 0;
                 top: 20px;
               }
+              img {
+                height: 253px;
+              }
             }
           }
         }
@@ -893,13 +905,39 @@
       &-thumb {
         &::before {
           transition: all 0.35s;
-          box-shadow: 0 0 0 0px inset #f1e1d5;
+          box-shadow: inset 0 0 0 0px #f1e1d5;
         }
       }
       &:hover {
         .news__block-thumb::before {
           background: $color-white;
-          box-shadow: 0 0 0 10px inset #f1e1d5;
+          box-shadow: inset 0 0 0 10px #f1e1d5;
+        }
+      }
+      &.--center {
+        #{$this} {
+          &__block {
+            &-thumb {
+              img {
+                height: 230px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__block {
+      &.--center {
+        #{$this} {
+          &__block {
+            &-thumb {
+              img {
+                height: 264px;
+              }
+            }
+          }
         }
       }
     }
@@ -2643,6 +2681,8 @@
       top: 0;
       right: 35px;
       bottom: 0;
+      transition: all 0.35s;
+      box-shadow: inset 0 0 0 0px #f1e1d5;
     }
     &.--second {
       padding: 0px 23px 30px 0px;
@@ -2826,9 +2866,15 @@
       margin-bottom: 24px;
     }
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(xl) {
     &__block {
       margin-bottom: 32px;
+      &:hover {
+        &::before {
+          background: $color-white;
+          box-shadow: inset 0 0 0 10px #f1e1d5;
+        }
+      }
     }
   }
 }
@@ -5245,9 +5291,10 @@
   }
   &__wrapper {
     padding-left: 24px;
+    position: relative;
   }
   &__carousel {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
     z-index: 10;
     &::before {
       content: '';
@@ -5267,6 +5314,10 @@
     z-index: 5;
   }
   &__btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -40px;
     &-prev, &-next {
       position: absolute;
       left: 50%;
@@ -5291,7 +5342,7 @@
   }
   @include media-breakpoint-up(md) {
     padding-top: 70px;
-    padding-bottom: 90px;
+    padding-bottom: 30px;
     background-size: 588px 288px;
     background-position: 86% 116%;
     &::before {
@@ -5304,6 +5355,7 @@
       padding-left: 38px;
     }
     &__carousel {
+      margin-bottom: 120px;
       &::before {
         left: -38px;
         bottom: -32px;
@@ -5313,11 +5365,7 @@
       margin-left: -38px;
     }
     &__btn {
-      position: relative;
-      float: right;
-      width: 170px;
-      height: 22px;
-      margin-top: -42px;
+      margin-top: -60px;
     }
   }
   @include media-breakpoint-up(lg) {
@@ -5327,6 +5375,7 @@
       padding-left: 48px;
     }
     &__carousel {
+      
       &::before {
         left: -48px;
         bottom: -41px;
@@ -5335,6 +5384,7 @@
     &__content {
       margin-left: -48px;
     }
+    
   }
   @include media-breakpoint-up(xl) {
     background-position: calc(100% - -15px) calc(100% - -170px);
@@ -5358,10 +5408,18 @@
       font-size: rem(18px);
     }
     &__btn {
+      position: relative;
+      float: right;
+      width: 170px;
+      height: 22px;
+      margin-top: -42px;
+    }
+    &__btn {
       margin: 0;
       bottom: 0;
       position: absolute;
       right: 0;
+      left: 975px;
     }
     .h2, h2 {
       font-size: rem(55px);
@@ -5373,6 +5431,7 @@
         top: 48px;
       }
     }
+    
   }
   @include media-breakpoint-up(xxl) {
     padding-top: 120px;
@@ -5402,6 +5461,9 @@
     }
     &__content {
       font-size: rem(20px);
+    }
+    &__btn {
+      left: 1115px;
     }
   }
 }
