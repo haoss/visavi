@@ -76,6 +76,8 @@ $(document).on('ready', function(){
     waitForAnimate: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 960,
@@ -156,7 +158,9 @@ $(document).on('ready', function(){
     infinite: true,
     waitForAnimate: false,
     fade: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 4000
   });
 
   collapseNavigation();
