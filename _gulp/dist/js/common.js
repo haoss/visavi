@@ -54,8 +54,6 @@ $(document).on('ready', function(){
 
   
 
-  $(".before-after").twentytwenty();
-
   $('.about-us__carousel').slick({
     mobileFirst: true,
     dots: false,
@@ -151,6 +149,20 @@ $(document).on('ready', function(){
     autoplaySpeed: 4000
   });
 
+  $('.look__carousel').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    touchMove: false,
+    draggable: false,
+    infinite: true,
+    swipe: false,
+    waitForAnimate: false,
+    variableWidth: true,
+    prevArrow: '.one-services__gallery-carousel .look__btn-left',
+    nextArrow: '.one-services__gallery-carousel .look__btn-right'
+  });
+
   collapseNavigation();
   collapseTable();
   headerScroll();
@@ -173,19 +185,8 @@ $(document).on('ready', function(){
 
 $(window).on('load', function() {
   
-  $('.look__carousel').slick({
-    mobileFirst: true,
-    dots: false,
-    arrows: true,
-    touchMove: false,
-    draggable: false,
-    infinite: true,
-    swipe: false,
-    waitForAnimate: false,
-    variableWidth: true,
-    prevArrow: '.one-services__gallery-carousel .look__btn-left',
-    nextArrow: '.one-services__gallery-carousel .look__btn-right'
-  });
+  $(".before-after").twentytwenty();
+  
 });
 
 $(window).on('scroll', function() {
