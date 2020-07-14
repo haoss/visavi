@@ -594,13 +594,16 @@
     &-thumb {
       padding: 15px 0 10px 38px;
       position: relative;
-      margin-bottom: 20px;
+      width: 300px;
+      margin: 0 auto 20px;
       img {
         background: #C4C4C4;
         box-shadow: 0px 4px 4px rgba(199, 160, 133, 0.2);
         position: relative;
         z-index: 5;
-        width: 100%;
+        width: 253px;
+        height: 253px;
+        object-fit: cover;
       }
       &::before {
         content: '';
@@ -830,6 +833,13 @@
               }
             }
           }
+        }
+      }
+      &-thumb {
+        width: auto;
+        img {
+          width: 314px;
+          height: 314px;
         }
       }
     }
@@ -5424,6 +5434,7 @@
       position: absolute;
       right: 0;
       left: 975px;
+      z-index: 10;
     }
     .h2, h2 {
       font-size: rem(55px);
