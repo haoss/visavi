@@ -52,19 +52,7 @@ $(document).on('ready', function(){
     $.magnificPopup.close();
   });
 
-  $('.look__carousel').slick({
-    mobileFirst: true,
-    dots: false,
-    arrows: true,
-    touchMove: false,
-    draggable: false,
-    infinite: true,
-    swipe: false,
-    waitForAnimate: false,
-    variableWidth: true,
-    prevArrow: '.one-services__gallery-carousel .look__btn-left',
-    nextArrow: '.one-services__gallery-carousel .look__btn-right'
-  });
+  
 
   $(".before-after").twentytwenty();
 
@@ -184,7 +172,20 @@ $(document).on('ready', function(){
 });
 
 $(window).on('load', function() {
-  $(".loader").delay(400).fadeOut("slow");
+  
+  $('.look__carousel').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: true,
+    touchMove: false,
+    draggable: false,
+    infinite: true,
+    swipe: false,
+    waitForAnimate: false,
+    variableWidth: true,
+    prevArrow: '.one-services__gallery-carousel .look__btn-left',
+    nextArrow: '.one-services__gallery-carousel .look__btn-right'
+  });
 });
 
 $(window).on('scroll', function() {
