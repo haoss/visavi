@@ -137,6 +137,10 @@
         &::before {
           top: 11px;
         }
+        img {
+          height: 224px;
+          object-fit: cover;
+        }
       }
     }
     &-head {
